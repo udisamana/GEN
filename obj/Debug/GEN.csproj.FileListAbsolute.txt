@@ -1,0 +1,42 @@
+C:\Savion\XL\Kits\GEN\1.00\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\1.00\GEN\bin\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00\GEN\bin\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\1.00\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\1.00\GEN\obj\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00\GEN\obj\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\bin\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\bin\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\obj\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00 - Copy - Copy\GEN\obj\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\bin\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\bin\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\obj\Debug\GC2.dll
+C:\Savion\XL\Kits\GEN\1.00 - Copy\GEN\obj\Debug\GC2.pdb
+C:\Savion\XL\Kits\GEN\CFN\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\CFN\GEN\bin\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\CFN\GEN\bin\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\CFN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\CFN\GEN\obj\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\CFN\GEN\obj\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\GC2\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\GC2\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\GC2\GEN\bin\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\GC2\GEN\bin\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\GC2\GEN\obj\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\GC2\GEN\obj\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\GEN\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\GEN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\GEN\GEN\bin\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\GEN\GEN\bin\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\GEN\GEN\obj\Debug\CFN.dll
+C:\Savion\XL\Kits\GEN\GEN\GEN\obj\Debug\CFN.pdb
+C:\Savion\XL\Kits\GEN\GEN\bin\Debug\GEN.cs
+C:\Savion\XL\Kits\GEN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\XL\Kits\GEN\GEN\bin\Debug\AJP.dll
+C:\Savion\XL\Kits\GEN\GEN\bin\Debug\AJP.pdb
+C:\Savion\XL\Kits\GEN\GEN\obj\Debug\AJP.dll
+C:\Savion\XL\Kits\GEN\GEN\obj\Debug\AJP.pdb

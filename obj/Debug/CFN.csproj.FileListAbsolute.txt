@@ -1,0 +1,39 @@
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CFN.cs
+C:\NNC400\Developement\CFN\CFN\bin\Debug\Controls.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CRC.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\DataTypes.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\ErrorHandling.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\LogicLayer.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\SystemConfiguration.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\TemplateLib.DLL
+C:\NNC400\Developement\CFN\CFN\bin\Debug\DatabaseLayer.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\PCRManager.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CameraInterface.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\Maintenance.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CameraCC.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\IPL2.dll
+C:\NNC400\Developement\CFN\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CFN.dll
+C:\NNC400\Developement\CFN\CFN\bin\Debug\CFN.pdb
+C:\NNC400\Developement\CFN\CFN\obj\Debug\CFN.dll
+C:\NNC400\Developement\CFN\CFN\obj\Debug\CFN.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\CFN.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\CFN.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\CFN.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\obj\Debug\CFN.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Other Documents\CFN\CFN\obj\Debug\CFN.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CFN.cs
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CFN.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CFN.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\CFN.csprojResolveAssemblyReference.cache
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\CFN.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\CFN.pdb

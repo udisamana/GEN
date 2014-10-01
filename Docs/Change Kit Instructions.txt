@@ -1,0 +1,4 @@
+﻿1. Replace XMLs
+2. Change assembly name of GEN Project
+3. change namespace and class in GEN.cs
+4. mark xmls as Emmbedded resource!

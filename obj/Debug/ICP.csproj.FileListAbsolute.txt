@@ -1,0 +1,5 @@
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\CFN.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\ICP.cs
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CFN.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CFN.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\CFN.dll

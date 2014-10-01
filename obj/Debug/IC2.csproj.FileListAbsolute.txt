@@ -1,0 +1,543 @@
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IC2.cs
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IC2.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IC2.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\IC2.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\IC2.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\obj\Debug\IC2.csprojResolveAssemblyReference.cache
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Controls.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CRC.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\DataTypes.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\ErrorHandling.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\SystemConfiguration.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\TemplateLib.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\PCRManager.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CameraInterface.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Maintenance.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\LogicLayer.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CameraCC.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Controls.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CRC.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\DataTypes.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\PCRManager.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Maintenance.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\CameraCC.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.xml
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\IdanP\Desktop\CFN_ICP\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\CFN_ICP\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\CFN_ICP\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\CFN_ICP\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\CFN_ICP\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 03.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP new\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 08.09.13 OK\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 09.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 10.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 11.09.13 - Arie changes\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\CFN_ICP 16.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 17.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 18.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\TemplateLib.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 30.09.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\TemplateLib.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 01.10.13\CFN\obj\Debug\IC2.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\obj\Debug\IC2.csprojResolveAssemblyReference.cache
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\obj\Debug\IC2.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\obj\Debug\IC2.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IC2.cs
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IC2.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IC2.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\TemplateLib.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IPL2.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\Controls.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\CRC.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\IPL2.xml
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\IdanP\Desktop\ICP 01.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 02.10.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 07.10.13\CFN\obj\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IC2.cs
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IC2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\PCRManager.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\CameraInterface.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\Maintenance.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\LogicLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\CameraCC.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IPL2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\DatabaseLayer.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\Controls.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\CRC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\DataTypes.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\ErrorHandling.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\SystemConfiguration.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\TemplateLib.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\PCRManager.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\CameraInterface.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\Maintenance.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\LogicLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\CameraCC.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IPL2.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\IPL2.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\DatabaseLayer.pdb
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\obj\Debug\IC2.dll
+C:\Users\DovG\Desktop\Projects\Gamidor\Analyze DLL\Implementation\SW\ICP 16.10.13 - tmp\CFN\obj\Debug\IC2.pdb
+C:\NNC400\Developement\ICP 16.10.13\CFN\bin\Debug\IC2.cs
+C:\NNC400\Developement\ICP 16.10.13\CFN\bin\Debug\IC2.dll
+C:\NNC400\Developement\ICP 16.10.13\CFN\bin\Debug\IC2.pdb
+C:\NNC400\Developement\ICP 16.10.13\CFN\obj\Debug\ResolveAssemblyReference.cache
+C:\NNC400\Developement\ICP 16.10.13\CFN\obj\Debug\IC2.dll
+C:\NNC400\Developement\ICP 16.10.13\CFN\obj\Debug\IC2.pdb
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\bin\Debug\IC2.cs
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\bin\Debug\IC2.dll
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\bin\Debug\IC2.pdb
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\obj\Debug\IC2.csprojResolveAssemblyReference.cache
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\obj\Debug\IC2.dll
+C:\Users\udi\Desktop\ICP 16.10.13\CFN\obj\Debug\IC2.pdb
