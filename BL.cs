@@ -27,6 +27,7 @@ namespace Template
                                                               x.Reporter == signal.Reporter &&
                                                               x.isControl == false);
 
+
                 if (target != null && target.Name != "Control")
                 {
                     MappedSignalTarget mappedSignalTarget = new MappedSignalTarget();
