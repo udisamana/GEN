@@ -23,9 +23,9 @@ using CRC;
 using System.Collections;
 using Template;
 
-namespace AJP
+namespace TSD
 {
-    public class AJP : TPL_BaseTemplate
+    public class TSD : TPL_BaseTemplate
     {
         // NVC is not calculated in CalcRatio so number of markers is counted without him
         public const int NUMBER_OF_MARKERS_PER_SAPMLE_WITHOUT_NVC = 9;

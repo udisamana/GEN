@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Template</RootNamespace>
-    <AssemblyName>AJP</AssemblyName>
+    <AssemblyName>TSD</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -75,14 +75,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AJPTemplate.xml">
+    <EmbeddedResource Include="XMLs\AJP\AJPTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AJP_LOADINGPATTERN.xml">
+    <EmbeddedResource Include="XMLs\AJP\AJP_LOADINGPATTERN.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="XMLs\TSD\TSD_LOADINGPATTERN.xml" />
-    <EmbeddedResource Include="XMLs\TSD\TSDTemplate.xml" />
+    <EmbeddedResource Include="TSD_LOADINGPATTERN.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSDTemplate.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="XMLs\GC2\GC2_LOADINGPATTERN.xml" />
     <EmbeddedResource Include="XMLs\GC2\GC2Template.xml" />
     <EmbeddedResource Include="XMLs\CFN\CFN_LOADINGPATTERN.xml" />
@@ -94,7 +98,7 @@
     <Content Include="Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XMLs\AJP\" />
+    <Folder Include="XMLs\TSD\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

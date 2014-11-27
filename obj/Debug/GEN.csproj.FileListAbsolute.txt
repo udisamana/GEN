@@ -40,3 +40,15 @@ C:\Savion\XL\Kits\GEN\GEN\bin\Debug\AJP.dll
 C:\Savion\XL\Kits\GEN\GEN\bin\Debug\AJP.pdb
 C:\Savion\XL\Kits\GEN\GEN\obj\Debug\AJP.dll
 C:\Savion\XL\Kits\GEN\GEN\obj\Debug\AJP.pdb
+C:\Savion\Kits\GEN\GEN\bin\Debug\GEN.cs
+C:\Savion\Kits\GEN\GEN\bin\Debug\AJP.dll
+C:\Savion\Kits\GEN\GEN\bin\Debug\AJP.pdb
+C:\Savion\Kits\GEN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\Kits\GEN\GEN\obj\Debug\AJP.dll
+C:\Savion\Kits\GEN\GEN\obj\Debug\AJP.pdb
+C:\Savion\inDrive\Kits\GEN\GEN\bin\Debug\GEN.cs
+C:\Savion\inDrive\Kits\GEN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
+C:\Savion\inDrive\Kits\GEN\GEN\bin\Debug\TSD.dll
+C:\Savion\inDrive\Kits\GEN\GEN\bin\Debug\TSD.pdb
+C:\Savion\inDrive\Kits\GEN\GEN\obj\Debug\TSD.dll
+C:\Savion\inDrive\Kits\GEN\GEN\obj\Debug\TSD.pdb

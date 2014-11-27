@@ -189,7 +189,7 @@ namespace Template
         {
             string ReturnedValue;
 
-
+            const double MIN_SIGNAL_LEVEL = 1.5;
             const double MinSignal = 1500;
             const double minus = -1000;
             const double LHET = 0.33;
@@ -219,7 +219,7 @@ namespace Template
                     ReturnedValue = "LS";
                 else
                     //If both signals are not twice the control
-                    if (Green / GreenControl < 2 && Red / RedControl < 2 && Green / GreenControl > 0 && Red / RedControl > 0)
+                    if (Green / GreenControl < MIN_SIGNAL_LEVEL && Red / RedControl < MIN_SIGNAL_LEVEL && Green / GreenControl > 0 && Red / RedControl > 0)
                         ReturnedValue = "LS";
                     else
                     {
@@ -229,7 +229,7 @@ namespace Template
                             ReturnedValue = "LS";
                         else
                             //HET ratio but one of the signals is not twice the control
-                            if (ScaledRatio > LHET && ScaledRatio < UHET && ((Green / GreenControl > 0 && Green / GreenControl < 2) || (Red / RedControl > 0 && Red / RedControl < 2)))
+                            if (ScaledRatio > LHET && ScaledRatio < UHET && ((Green / GreenControl > 0 && Green / GreenControl < MIN_SIGNAL_LEVEL) || (Red / RedControl > 0 && Red / RedControl < MIN_SIGNAL_LEVEL)))
                                 ReturnedValue = "LS";
                             else
                                 if (ScaledRatio >= 100)
