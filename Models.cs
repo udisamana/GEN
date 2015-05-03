@@ -17,6 +17,7 @@ namespace Template
         public int Reporter { get; set; }
         public Colors Color { get; set; }
         public double Value { get; set; }
+        public int pad { get; set; }
 
         internal static List<Signal> ToModel(double[, , ,] array)
         {
@@ -56,7 +57,6 @@ namespace Template
         public int Capture { get; set; }
         public string ControlPatogenName { get; set; } //control per single patogen
 
-
         internal static List<Target> ToModel(string[,] array)
         {
             List<Target> patogens = new List<Target>();
@@ -73,7 +73,7 @@ namespace Template
                                 Reporter = reporter + 1,
                                 Name = array[capture, reporter],
                                 Color = Colors.Green,
-                                isControl = false
+                                isControl = false,
                             });
                         else
                             patogens.Add(new Target
@@ -101,6 +101,7 @@ namespace Template
         //
 
 
+
     }
     public class MinSigControl
     {
@@ -126,6 +127,7 @@ namespace Template
         public double ControlValue { get; set; }
         public Colors Color { get; set; }
         public string Inter { get; set; }
+
 
         internal static string[,] FromModel(List<PatRes> models)
         {
@@ -164,7 +166,7 @@ namespace Template
         public int ControlCapture { get; set; }
     }
 
-    public class PatogenResult
+    public class PatogenReferanceResult
     {
         public string Name { get; set; }
         public bool isControl { get; set; }
@@ -182,7 +184,7 @@ namespace Template
         public bool isAvgBkg { get; set; }
         public string ControlPatogenName { get; set; } //control per single patogen
 
-        internal static string[,] FromModel(List<PatogenResult> models)
+        internal static string[,] FromModel(List<PatogenReferanceResult> models)
         {
             //            int columns = new PatogenResult().GetType().GetProperties().Count();
             int columns = 10;
@@ -194,17 +196,32 @@ namespace Template
             int modelIndex = 0;
             foreach (var model in models)
             {
-                array[modelIndex, 0] = model.Reporter.ToString();
-                array[modelIndex, 1] = model.Name;
-                array[modelIndex, 2] = model.MixSet.ToString();
-                array[modelIndex, 3] = model.Color.ToString();
-                array[modelIndex, 4] = Math.Round(model.MinBkg, 1).ToString();
-                array[modelIndex, 5] = Math.Round(model.DivBkg, 1).ToString();
-                array[modelIndex, 6] = model.IsPass.ToString();
-                array[modelIndex, 7] = model.IsMixPass.ToString();
-                array[modelIndex, 8] = Math.Round(model.AvgBkg, 1).ToString();
-                array[modelIndex, 9] = model.ControlPatogenName ?? "";
-
+                if (model.Name == null)
+                {
+                    array[modelIndex, 0] = model.Reporter.ToString();
+                    array[modelIndex, 1] = model.Name;
+                    array[modelIndex, 2] = "";
+                    array[modelIndex, 3] = model.Color.ToString();
+                    array[modelIndex, 4] = "";
+                    array[modelIndex, 5] = "";
+                    array[modelIndex, 6] = "";
+                    array[modelIndex, 7] = "";
+                    array[modelIndex, 8] = Math.Round(model.AvgBkg, 1).ToString("0");
+                    array[modelIndex, 9] = model.ControlPatogenName ?? "";
+                }
+                else
+                {
+                    array[modelIndex, 0] = model.Reporter.ToString();
+                    array[modelIndex, 1] = model.Name;
+                    array[modelIndex, 2] = model.MixSet.ToString();
+                    array[modelIndex, 3] = model.Color.ToString();
+                    array[modelIndex, 4] = Math.Round(model.MinBkg, 1).ToString("0");
+                    array[modelIndex, 5] = Math.Round(model.DivBkg, 1).ToString("0");
+                    array[modelIndex, 6] = model.IsPass.ToString();
+                    array[modelIndex, 7] = model.IsMixPass.ToString();
+                    array[modelIndex, 8] = Math.Round(model.AvgBkg, 1).ToString("0");
+                    array[modelIndex, 9] = model.ControlPatogenName ?? "";
+                }
                 modelIndex++;
             }
 
@@ -252,7 +269,7 @@ namespace Template
 
     }
 
-    public class RefResult
+    public class MutRefResult
     {
         public int Reporter { get; set; }
         public string MixSet { get; set; }

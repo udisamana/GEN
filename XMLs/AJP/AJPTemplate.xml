@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE CHECKSUM="26215">
-  <INFORMATION CREATEDBY="" CREAETDATE="28/09/2014 16:33:16" INFORMATION="AJP" VERSION="1.08" ACRONYM="AJP" DESCRIPTION="Ashkenazi Jewish Panel" PADS_REUSES="10" WELLS_PER_SAMPLE="1" />
-  <PCR DIRECTORY="-1" PROGRAM="-1" />
+<TEMPLATE CHECKSUM="45360">
+  <INFORMATION CREATEDBY="" CREAETDATE="01/01/2015 12:19:19" INFORMATION="AJP" VERSION="1.1" ACRONYM="AJP" DESCRIPTION="Ashkenazi Jewish Panel" PADS_REUSES="10" WELLS_PER_SAMPLE="1" />
+  <PCR DIRECTORY="1" PROGRAM="1" />
   <MATERIALS_CONFIGURATION>
     <REAGENT_BOTTLES>
       <REAGENT_BOTTLE LOCATION_ID="1" NAME="High Salt Buffer" TYPE="HSB" />
@@ -18,7 +18,7 @@
         <CONTENT WELL="5" NAME="Capture Mix 5" TYPE="capture" />
         <CONTENT WELL="6" NAME="Capture Mix 6" TYPE="capture" />
       </REAGENT_PACK>
-      <REAGENT_PACK LOCATION_ID="2" NAME="AJP 12 Reporter Pack Prefix" TYPE="AJR">
+      <REAGENT_PACK LOCATION_ID="2" NAME="AJP 13 Reporter Pack" TYPE="AJR">
         <CONTENT WELL="1" NAME="Reporter Mix 1" TYPE="reporter" />
         <CONTENT WELL="2" NAME="Reporter Mix 2" TYPE="reporter" />
         <CONTENT WELL="3" NAME="Reporter Mix 3" TYPE="reporter" />
@@ -28,6 +28,7 @@
         <CONTENT WELL="7" NAME="Reporter Mix 7" TYPE="reporter" />
         <CONTENT WELL="8" NAME="Reporter Mix 8" TYPE="reporter" />
         <CONTENT WELL="9" NAME="Reporter Mix 9" TYPE="reporter" />
+        <CONTENT WELL="10" NAME="Reporter Mix 10" TYPE="reporter" />
       </REAGENT_PACK>
     </REAGENT_PACKS>
   </MATERIALS_CONFIGURATION>
@@ -37,7 +38,7 @@
         <MUTATION INFORMATION="AAT-PIZ" REPORTER="6" CAPTURE="6" />
       </DISEASE>
       <DISEASE INFORMATION="BLM" DESCRIPTION="">
-        <MUTATION INFORMATION="BLM" REPORTER="3" CAPTURE="1" />
+        <MUTATION INFORMATION="BLM" REPORTER="10" CAPTURE="5" />
       </DISEASE>
       <DISEASE INFORMATION="CAN" DESCRIPTION="">
         <MUTATION INFORMATION="CAN-854" REPORTER="1" CAPTURE="5" />
@@ -86,7 +87,6 @@
       <MUTATION INFORMATION="FD-R696P" REPORTER="2" CAPTURE="2" />
       <MUTATION INFORMATION="Control" REPORTER="2" CAPTURE="5" />
       <MUTATION INFORMATION="G35T" REPORTER="2" CAPTURE="6" />
-      <MUTATION INFORMATION="BLM" REPORTER="3" CAPTURE="1" />
       <MUTATION INFORMATION="Control" REPORTER="3" CAPTURE="2" />
       <MUTATION INFORMATION="CAN-693" REPORTER="3" CAPTURE="4" />
       <MUTATION INFORMATION="FD-2507" REPORTER="3" CAPTURE="5" />
@@ -108,6 +108,8 @@
       <MUTATION INFORMATION="Control" REPORTER="8" CAPTURE="3" />
       <MUTATION INFORMATION="Control" REPORTER="9" CAPTURE="1" />
       <MUTATION INFORMATION="N48K" REPORTER="9" CAPTURE="5" />
+      <MUTATION INFORMATION="Control" REPORTER="10" CAPTURE="1" />
+      <MUTATION INFORMATION="BLM" REPORTER="10" CAPTURE="5" />
     </MUTATION_ASSIGNMENT>
   </MAIN_DISEASES>
   <PROCESS>
@@ -487,7 +489,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="41" PARENT="Reporting" PARENT_ID="6">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="42" PARENT="Reporting" PARENT_ID="7">
       <VOLUME>50</VOLUME>
@@ -658,7 +660,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="64" PARENT="Reporting" PARENT_ID="7">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="65" PARENT="Reporting" PARENT_ID="8">
       <VOLUME>50</VOLUME>
@@ -815,7 +817,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="83" PARENT="Reporting" PARENT_ID="8">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="84" PARENT="Reporting" PARENT_ID="9">
       <VOLUME>50</VOLUME>
@@ -972,7 +974,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="102" PARENT="Reporting" PARENT_ID="9">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="103" PARENT="Reporting" PARENT_ID="10">
       <VOLUME>50</VOLUME>
@@ -1136,7 +1138,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="123" PARENT="Reporting" PARENT_ID="10">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="124" PARENT="Reporting" PARENT_ID="11">
       <VOLUME>50</VOLUME>
@@ -1293,7 +1295,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="142" PARENT="Reporting" PARENT_ID="11">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="143" PARENT="Reporting" PARENT_ID="12">
       <VOLUME>50</VOLUME>
@@ -1422,7 +1424,7 @@
         <IPL>1</IPL>
         <VBINNING>1</VBINNING>
         <HBINNING>1</HBINNING>
-        <INTEGRATION_TIME>26000</INTEGRATION_TIME>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
         <BGND>I2</BGND>
       </IMAGE>
     </STAGE>
@@ -1443,7 +1445,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="159" PARENT="Reporting" PARENT_ID="12">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="160" PARENT="Reporting" PARENT_ID="13">
       <VOLUME>50</VOLUME>
@@ -1593,7 +1595,7 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="176" PARENT="Reporting" PARENT_ID="13">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
     <STAGE NAME="Initial_Fill_Cartridge" INDEX="177" PARENT="Reporting" PARENT_ID="14">
       <VOLUME>50</VOLUME>
@@ -1778,16 +1780,187 @@
     </STAGE>
     <STAGE NAME="Set_Temperature" INDEX="203" PARENT="Reporting" PARENT_ID="14">
       <OBJECT>CARTRIDGE</OBJECT>
-      <TEMPERATURE>24</TEMPERATURE>
+      <TEMPERATURE>27</TEMPERATURE>
     </STAGE>
-    <STAGE NAME="Deliver_TPB" INDEX="204" PARENT="Deliver_TPB" PARENT_ID="15">
+    <STAGE NAME="Initial_Fill_Cartridge" INDEX="204" PARENT="Reporting" PARENT_ID="15">
+      <VOLUME>50</VOLUME>
+      <LOCATION>1</LOCATION>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Acquire_Background_Reference_Image" INDEX="205" PARENT="Reporting" PARENT_ID="15">
+      <REPEAT>1</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>4000</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Empty_Cartridge/Set_Reporter" INDEX="206" PARENT="Reporting" PARENT_ID="15">
+      <VOLUME>50</VOLUME>
+      <LOCATION>20</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="207" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>57</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="208" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="208" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>54</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="209" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="209" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>51</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="210" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="210" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>48</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="211" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="211" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>45</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="212" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="212" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>43</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="213" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="213" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>41</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait/Wash_Cartridge_With_Reagent" INDEX="220" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>30</DURATION>
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="221" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Image_Array" INDEX="222" PARENT="Reporting" PARENT_ID="15">
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>4000</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="223" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>50</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="224" PARENT="Reporting" PARENT_ID="15">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="225" PARENT="Reporting" PARENT_ID="15">
+      <VOLUME>400</VOLUME>
+      <LOCATION>2</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="226" PARENT="Reporting" PARENT_ID="15">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Deliver_TPB" INDEX="227" PARENT="Deliver_TPB" PARENT_ID="16">
       <LOCATION>3</LOCATION>
       <VOLUME>400</VOLUME>
       <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
       <ASPIRATE_RATE>25</ASPIRATE_RATE>
       <DISPENSE_RATE>250</DISPENSE_RATE>
     </STAGE>
-    <STAGE NAME="Reverse_Bias" INDEX="205" PARENT="Reverse_Bias" PARENT_ID="16">
+    <STAGE NAME="Reverse_Bias" INDEX="228" PARENT="Reverse_Bias" PARENT_ID="17">
       <REPEAT>2</REPEAT>
       <IMAGE>
         <FILTER>3</FILTER>
@@ -1807,20 +1980,20 @@
         <POLLING>3</POLLING>
       </ACTIVATION>
     </STAGE>
-    <STAGE NAME="Rinse_Cartridge" INDEX="206" PARENT="Reverse_Bias" PARENT_ID="16" />
-    <STAGE NAME="Rinse_Cartridge" INDEX="207" PARENT="Reverse_Bias" PARENT_ID="16" />
-    <STAGE NAME="Rinse_Cartridge" INDEX="208" PARENT="Reverse_Bias" PARENT_ID="16" />
-    <STAGE NAME="Finish_Fill/Wash_Tip" INDEX="209" PARENT="Reverse_Bias" PARENT_ID="16">
+    <STAGE NAME="Rinse_Cartridge" INDEX="229" PARENT="Reverse_Bias" PARENT_ID="17" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="230" PARENT="Reverse_Bias" PARENT_ID="17" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="231" PARENT="Reverse_Bias" PARENT_ID="17" />
+    <STAGE NAME="Finish_Fill/Wash_Tip" INDEX="232" PARENT="Reverse_Bias" PARENT_ID="17">
       <REPEAT>2</REPEAT>
     </STAGE>
-    <STAGE NAME="Deliver_TPB" INDEX="210" PARENT="Deliver_TPB" PARENT_ID="17">
+    <STAGE NAME="Deliver_TPB" INDEX="233" PARENT="Deliver_TPB" PARENT_ID="18">
       <LOCATION>3</LOCATION>
       <VOLUME>400</VOLUME>
       <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
       <ASPIRATE_RATE>25</ASPIRATE_RATE>
       <DISPENSE_RATE>250</DISPENSE_RATE>
     </STAGE>
-    <STAGE NAME="Reverse_Bias" INDEX="211" PARENT="Reverse_Bias" PARENT_ID="18">
+    <STAGE NAME="Reverse_Bias" INDEX="234" PARENT="Reverse_Bias" PARENT_ID="19">
       <REPEAT>2</REPEAT>
       <IMAGE>
         <FILTER>3</FILTER>
@@ -1840,10 +2013,10 @@
         <POLLING>3</POLLING>
       </ACTIVATION>
     </STAGE>
-    <STAGE NAME="Rinse_Cartridge" INDEX="212" PARENT="Reverse_Bias" PARENT_ID="18" />
-    <STAGE NAME="Rinse_Cartridge" INDEX="213" PARENT="Reverse_Bias" PARENT_ID="18" />
-    <STAGE NAME="Rinse_Cartridge" INDEX="214" PARENT="Reverse_Bias" PARENT_ID="18" />
-    <STAGE NAME="Finish_Fill/Wash_Tip" INDEX="215" PARENT="Reverse_Bias" PARENT_ID="18">
+    <STAGE NAME="Rinse_Cartridge" INDEX="235" PARENT="Reverse_Bias" PARENT_ID="19" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="236" PARENT="Reverse_Bias" PARENT_ID="19" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="237" PARENT="Reverse_Bias" PARENT_ID="19" />
+    <STAGE NAME="Finish_Fill/Wash_Tip" INDEX="238" PARENT="Reverse_Bias" PARENT_ID="19">
       <REPEAT>2</REPEAT>
     </STAGE>
   </PROCESS>

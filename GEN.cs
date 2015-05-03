@@ -23,10 +23,12 @@ using CRC;
 using System.Collections;
 using Template;
 
-namespace TSD
+namespace ST6 // new kit
 {
-    public class TSD : TPL_BaseTemplate
+    public class ST6 : TPL_BaseTemplate // new kit
     {
+
+
         // NVC is not calculated in CalcRatio so number of markers is counted without him
         public const int NUMBER_OF_MARKERS_PER_SAPMLE_WITHOUT_NVC = 9;
 
@@ -34,6 +36,17 @@ namespace TSD
         public const int NUMBER_OF_MARKERS_PER_SAPMLE = NUMBER_OF_MARKERS_PER_SAPMLE_WITHOUT_NVC + 1;
 
         // const of marker names
+
+
+        public const string ExtractionControl = "Extraction Control";
+        public const string Negative = "Negative";
+        public const string Invalid = "Invalid";
+        public const int INSTANCESNUMBER = 2;
+        public const int NUMBEROFCOLORS = 2;
+        public List<PatogenReferanceResult> patogenRefResults = new List<PatogenReferanceResult>();
+        public List<MutRefResult> mutRfResults = new List<MutRefResult>();
+
+
         public const string HIS1 = "HIS1";
         public const string HIS2 = "HIS2";
         public const string HIS3 = "HIS3";
@@ -67,6 +80,7 @@ namespace TSD
         public const string CON_MR_MSSA = "CoN-MR+MSSA";
         public const string POSSIBLE_MRSA = "Possible MRSA";
         public const string RESULT_MRSA = "MRSA";
+
 
 
         public const string NONE_EFS_EFM_VAN = "None efs/efm Van+";
@@ -1087,7 +1101,8 @@ namespace TSD
             return result;
         }
 
-
+        public const string POS = "Pos";
+        public const string NEG = "-";
         public string kitType = string.Empty;
         public int reporters;
         public string[,] init()
@@ -1108,6 +1123,7 @@ namespace TSD
                     CepMax = Convert.ToInt32(mutationsAssignment[currentPosition].CaptureIndex);
                 }
 
+
                 if (Convert.ToInt32(mutationsAssignment[currentPosition].ReporterIndex) > reporters)
                 {
                     reporters = Convert.ToInt32(mutationsAssignment[currentPosition].ReporterIndex);
@@ -1125,13 +1141,14 @@ namespace TSD
 
             if (acronym == "CFN" || acronym == "TSD" || acronym == "AJP")
                 kitType = "Mutation";
-            if (acronym == "GC2")
+            if (acronym == "GC2" || acronym == "GCQ" || acronym == "GI2" || acronym == "ST6")//new kit, classify new acronim
                 kitType = "Pathogen";
 
             return MarkerName;
         }
         public override string[,] Analyze(double[, , ,] signals, out string[] GeneralColumnsNames, out string[] ReporterNames, out string[] ColumnsNamesOfEachReporter, out string[] CustomColumnsNames, string[] SampleNameList, int[] SamplePositionList, double[,] referenceSignalsData, double[,] backgroundSignals)
         {
+
             GeneralColumnsNames = new string[2];
             ReporterNames = new string[1] { "" };
             ColumnsNamesOfEachReporter = new string[1] { "" };
@@ -1148,12 +1165,25 @@ namespace TSD
                 ColumnsNamesOfEachReporter = new string[5] { "Marker", "Green", "Red", "ScaledG/R", "Call" };
                 List<MutRes> MutRess = BL.MutationAnalyze(signalList, targets, acronym, SampleNameList);
                 return (BL.ConvertAnalyzeResultToLegendAnalyzeArray(MutRess, SamplePositionList));
+
             }
 
             if (kitType == "Pathogen")
             {
+                GeneralColumnsNames = new string[2] { "Position", "Sample" };
+
+                ReporterNames = Enumerable.Range(1, reporters).Select(x => "Reporter Mix " + x).ToArray();
+
+                ColumnsNamesOfEachReporter = new string[5] { "Target", "Color", "Value", "Control Value", "Inter" };
+                List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
+
+                return (BL.ConvertAnalyzeResultToLegendAnalyzeArray(PatRess, SamplePositionList, CustomValues.GetControlTarget(acronym)));
+            }
+
+            if (kitType == "Pathogen_old")
+            {
                 GeneralColumnsNames = new string[9] { "Index", "Sample", "Patogen", "Capture", "Reporter", "Color", "Control", "Value", "Inter" };
-                List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, SampleNameList);
+                List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
                 return PatRes.FromModel(PatRess.OrderBy(x => x.SampleIndex).ThenByDescending(x => x.Color).ToList());
             }
 
@@ -1179,24 +1209,27 @@ namespace TSD
             s[0, 0] = "Acronim Not Defined";
 
             init();
-            const int INSTANCESNUMBER = 2;
-            const int NUMBEROFCOLORS = 2;
+
             ReferenceColumnHeaders = CustomValues.GetReferenceColumnHeaders();
             List<Target> patogens = Target.ToModel(init());
             List<ReferenceSignal> referenceSignalModels = ReferenceSignal.ToModel(referenceSignals, NUMBEROFCOLORS, INSTANCESNUMBER, init().GetLength(0), init().GetLength(1));
 
             if (kitType == "Pathogen")
             {
-                patogens = CustomValues.CustomizeGC2(patogens);
-                List<PatogenResult> patogenResults = new List<PatogenResult>();
+                if (acronym == "GC2")
+                    patogens = CustomValues.CustomizeGC2(patogens);
+                if (acronym == "ST6")// new kit
+                    patogens = CustomValues.CustomizeST6(patogens);
+
+                patogenRefResults = new List<PatogenReferanceResult>();
 
                 //adding controls to results
                 foreach (var patogen in patogens.Where(x => x.isControl == true))
                 {
                     decimal avgBkg = referenceSignalModels.Where(x => x.Reporter == patogen.Reporter && x.Reference == patogen.Capture && x.Color == patogen.Color).Average(x => x.Value);//average of 2 instances
                     if (avgBkg < 1) avgBkg = 1;
-                    patogenResults.Add(
-                        new PatogenResult()
+                    patogenRefResults.Add(
+                        new PatogenReferanceResult()
                         {
                             Reporter = patogen.Reporter,
                             Color = patogen.Color,
@@ -1213,20 +1246,26 @@ namespace TSD
                     {
                         ReferenceSignal referenceSignal = referenceSignalModels.SingleOrDefault(x => x.Reporter == patogen.Reporter && x.Reference == patogen.Capture && x.Color == patogen.Color && x.Instance == instance);
                         decimal? avgBkg = null;
-                        if (patogenResults.Any(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == null))
-                            avgBkg = patogenResults.SingleOrDefault(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == null).AvgBkg;
-                        if (patogenResults.Any(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName != null))
-                            avgBkg = patogenResults.SingleOrDefault(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == patogen.Name).AvgBkg;
+                        if (patogenRefResults.Any(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == null))
+                            avgBkg = patogenRefResults.SingleOrDefault(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == null).AvgBkg;
+                        if (patogenRefResults.Any(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName != null))
+                            avgBkg = patogenRefResults.SingleOrDefault(x => x.Reporter == patogen.Reporter && x.Color == patogen.Color && x.isControl == true && x.ControlPatogenName == patogen.Name).AvgBkg;
 
                         if (!avgBkg.HasValue)
                             throw new IndexOutOfRangeException();//no control
 
                         decimal minBkg = referenceSignal.Value - avgBkg.Value;
                         decimal divBkg = referenceSignal.Value / avgBkg.Value;
+
                         bool isPass = false;
-                        isPass = CustomValues.isGC2PatogenPass(patogen.Name, minBkg, divBkg);
-                        patogenResults.Add(
-                            new PatogenResult()
+                        if (acronym == "GC2" || acronym == "GCT" || acronym == "GCQ" || acronym == "GI2")
+                            isPass = CustomValues.isGC2PatogenPass(patogen.Name, minBkg, divBkg);
+
+                        if (acronym == "ST6")// new kit
+                            isPass = CustomValues.isST6PatogenPass(patogen.Name, minBkg, divBkg);
+
+                        patogenRefResults.Add(
+                            new PatogenReferanceResult()
                             {
                                 Capture = patogen.Capture,
                                 Color = patogen.Color,
@@ -1244,10 +1283,11 @@ namespace TSD
 
                 //sorting
                 foreach (var patogen in patogens.Where(x => x.isControl != true))
-                    if (patogenResults.Where(x => x.Name == patogen.Name).Any(x => x.IsPass == true))
-                        patogenResults.Where(x => x.Name == patogen.Name).ToList().ForEach(x => x.IsMixPass = true);
+                    if (patogenRefResults.Where(x => x.Name == patogen.Name).Any(x => x.IsPass == true))
+                        patogenRefResults.Where(x => x.Name == patogen.Name).ToList().ForEach(x => x.IsMixPass = true);
 
-                return PatogenResult.FromModel(patogenResults.OrderBy(x => x.Reporter).ThenByDescending(x => x.Name).ToList());
+
+                return PatogenReferanceResult.FromModel(patogenRefResults.OrderBy(x => x.Reporter).ThenByDescending(x => x.Name).ToList());
             }
             if (kitType == "Mutation")
             {
@@ -1271,7 +1311,6 @@ namespace TSD
                 int captures = MarkerName.GetLength(0);
                 int reporters = MarkerName.GetLength(1);
                 List<string> sets = new List<string>() { "Set A", "Set B" };
-                List<RefResult> refResults = new List<RefResult>();
                 const int headers = 8;
 
                 for (int capture = 0; capture < captures; capture++)
@@ -1279,7 +1318,7 @@ namespace TSD
                         for (int set = 0; set < sets.Count; set++)
                             if (MarkerName[capture, reporter] != string.Empty && MarkerName[capture, reporter] != "Control" && MarkerName[capture, reporter] != null)
                             {
-                                RefResult refResult = new RefResult();
+                                MutRefResult refResult = new MutRefResult();
                                 refResult.Reporter = reporter;
                                 refResult.MixSet = set.ToString();
                                 refResult.Mutation = MarkerName[capture, reporter];
@@ -1299,13 +1338,13 @@ namespace TSD
                                 }
                                 refResult.IsReporterPass = true;
                                 refResult.IsMutantPass = BL.IsMutationPass(refResult);
-                                refResults.Add(refResult);
+                                mutRfResults.Add(refResult);
                             }
 
 
                 for (int reporter = 0; reporter < reporters; reporter++)
-                    if (refResults.Where(x => x.Reporter == reporter).ToList().Exists(x => x.IsMutantPass == false))
-                        foreach (var item in refResults.Where(x => x.Reporter == reporter).ToList())
+                    if (mutRfResults.Where(x => x.Reporter == reporter).ToList().Exists(x => x.IsMutantPass == false))
+                        foreach (var item in mutRfResults.Where(x => x.Reporter == reporter).ToList())
                             item.IsReporterPass = false;
 
                 for (int reporter = 0; reporter < reporters; reporter++)
@@ -1316,7 +1355,7 @@ namespace TSD
                     else
                         avgBkg = BL.trnc(BL.getReporterControlSignal(MarkerName, referenceSignals, reporter, captures, reporters, 1) / 2);
 
-                    refResults.Add(new RefResult()
+                    mutRfResults.Add(new MutRefResult()
                     {
                         Reporter = reporter,
                         isBackround = true,
@@ -1328,7 +1367,7 @@ namespace TSD
                     else
                         avgBkg = BL.trnc(BL.getReporterControlSignal(MarkerName, referenceSignals, reporter, captures, reporters, 0) / 2);
 
-                    refResults.Add(new RefResult()
+                    mutRfResults.Add(new MutRefResult()
                     {
                         Reporter = reporter,
                         isBackround = true,
@@ -1337,13 +1376,13 @@ namespace TSD
                     });
                 }
 
-                List<RefResult> sortedRefResults = new List<RefResult>();
+                List<MutRefResult> sortedRefResults = new List<MutRefResult>();
 
                 for (int reporter = 0; reporter < reporters; reporter++)
                 {
-                    sortedRefResults.AddRange(refResults.Where(x => x.isBackround != true && x.Reporter == reporter && x.MixSet == "0"));
-                    sortedRefResults.AddRange(refResults.Where(x => x.isBackround != true && x.Reporter == reporter && x.MixSet == "1"));
-                    sortedRefResults.AddRange(refResults.Where(x => x.isBackround == true && x.Reporter == reporter));
+                    sortedRefResults.AddRange(mutRfResults.Where(x => x.isBackround != true && x.Reporter == reporter && x.MixSet == "0"));
+                    sortedRefResults.AddRange(mutRfResults.Where(x => x.isBackround != true && x.Reporter == reporter && x.MixSet == "1"));
+                    sortedRefResults.AddRange(mutRfResults.Where(x => x.isBackround == true && x.Reporter == reporter));
                 }
 
 
@@ -1367,13 +1406,30 @@ namespace TSD
             if (kitType == "Pathogen")
             {
 
-                List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets);
+                List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym);
                 //header
                 analyzeResultsHeaders.Add("Sample");
-                analyzeResultsHeaders.AddRange(PatRess.Select(x => x.TargetName).Distinct().ToList());
+
+                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.bacteria).OrderBy(x => x.TargetName))
+                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
+
+                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.Parasite).OrderBy(x => x.TargetName))
+                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
+
+                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.undefined).OrderBy(x => x.TargetName))
+                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
+
+                analyzeResultsHeaders = analyzeResultsHeaders.OrderBy(x => name).Distinct().ToList();
+
                 DetailsColumnHeaders = analyzeResultsHeaders.ToArray();
                 //
 
+                analyzeResultsHeaders.Add("");
+                analyzeResultsHeaders.Add("");
+                analyzeResultsHeaders.Add("");
+                analyzeResultsHeaders.Add("");
+                analyzeResultsHeaders.Add("");
+                analyzeResultsHeaders.Add("");
                 return BL.ConvertAnalyzeResultToDetailsArrayPathogen(PatRess);
             }
             if (kitType == "Mutation")
@@ -1383,7 +1439,6 @@ namespace TSD
                 analyzeResultsHeaders.Add("Position");
                 analyzeResultsHeaders.Add("Sample");
                 analyzeResultsHeaders.AddRange(MutRess.Select(x => x.TargetName).Distinct().ToList());
-                analyzeResultsHeaders.Add("");
                 DetailsColumnHeaders = analyzeResultsHeaders.ToArray();
                 //
 
@@ -1402,10 +1457,188 @@ namespace TSD
         }
         public override string[,] Summary(double[, , ,] signals, out string[] SummaryColumnHeaders, string[] SampleNameList, int[] SamplePositionList, double[,] referenceSignalsData, double[,] backgroundSignals)
         {
-            string[,] SummaryDataTable = new string[1, 1];
+            List<Target> targets = Target.ToModel(init());
+            List<Signal> signalList = Signal.ToModel(signals);
+            List<PatRes> PatRess = new List<PatRes>();
+            List<MutRes> MutRess = new List<MutRes>();
+            if (kitType == "Pathogen")
+            {
+                PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
+            }
+            if(kitType == "Mutation")
+            {
+                MutRess = BL.MutationAnalyze(signalList, targets, acronym, SampleNameList);
+            }
+            Dictionary<string, string> ress = new Dictionary<string, string>();
+
+            SummaryColumnHeaders = new string[2];
+            SummaryColumnHeaders[0] = "Sample";
+            SummaryColumnHeaders[1] = "Target";
+
+            foreach (var sample in SampleNameList)
+            {
+
+
+
+                string sampleTargets = string.Empty;
+                if (kitType == "Pathogen")
+                {
+                    foreach (var target in PatRess.Where(x => x.SampleName == sample && x.Inter == POS))
+                    {
+                        if (patogenRefResults.Where(x => x.Reporter == target.Reporter).Any(x => x.IsPass == false))
+                            sampleTargets = "RE-TEST";
+                        else
+                        {
+                            sampleTargets += CustomValues.GetTargetFullNameByTarget(target.TargetName);
+                            sampleTargets += ", ";
+                        }
+                    }
+                }
+                if (kitType == "Mutation")
+                {
+                    foreach (var target in MutRess.Where(x => x.SampleName == sample && x.Call != "-"))
+                    {
+                        if (mutRfResults.Where(x => x.Reporter == target.Reporter).Any(x => x.IsMutantPass == false))
+                            sampleTargets = "RE-TEST";
+                        else
+                        {
+                            sampleTargets += CustomValues.GetTargetFullNameByTarget(target.TargetName);
+                            sampleTargets += ", ";
+                        }
+                    }
+                }
+
+                if (sampleTargets != string.Empty)
+                    sampleTargets = sampleTargets.Remove(sampleTargets.Length - 2);
+
+                if (sampleTargets == string.Empty)
+                    sampleTargets = Invalid;
+
+                if (sampleTargets == ExtractionControl)
+                    sampleTargets = Negative;
+
+
+
+                int index = sampleTargets.IndexOf(ExtractionControl);//remove the extraction control from targets
+                if(index > 0)
+                    sampleTargets = sampleTargets.Remove(index, ExtractionControl.Length);
+
+                ress.Add(sample, sampleTargets);
+            }
+
+            return (BL.ConvertDictionaryTo2dStringArray(ress));
+
+            /*
+                int currentPosition = 0;
+                int currentSample = 0;
+                int row = 0;
+                int column = 0;
+
+                // get number of pads
+                int numberOfMarkers = signals.GetLength(MARKER_LIST);
+
+                // get number of samples
+                int numberOfSampleList = signals.GetLength(SAMPLE_LIST);
+
+
+                // init size from enum
+                int EnumSizeSummarylColumnsNames = Enum.GetNames(typeof(SummaryColumnsNames)).Length;
+
+                // set headlines of the table        
+                SummaryColumnHeaders = new string[EnumSizeSummarylColumnsNames];
+
+                // set name for each parameter 
+                for (currentPosition = 0; currentPosition < SummaryColumnHeaders.Length; currentPosition++)
+                {
+                    SummaryColumnHeaders[currentPosition] = Enum.GetName(typeof(SummaryColumnsNames), currentPosition);
+                }
+
+                // get data from analyze
+                string[,] DetailsDataTable = Details(signals, out DetailsColumnHeaders, SampleNameList, SamplePositionList, referenceSignalsData, backgroundSignals);
+
+                // set the size of SummaryDataTable 
+                string[,] SummaryDataTable = new string[numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES, EnumSizeSummarylColumnsNames];
+
+
+                for (column = 0; column < SummaryDataTable.GetLength(COLUMN_SIZE); column++)
+                {
+                    for (row = 0; row < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; row++)
+                    {
+                        SummaryDataTable[row, column] = "";
+                    }
+                }
+
+                string result = "";
+
+                for (currentSample = 0; currentSample < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; currentSample++)
+                {
+                    // set index
+                    SummaryDataTable[currentSample, SUMMARY_INDEX_COLUMN] = (currentSample + 1).ToString();
+
+                    // set position
+                    SummaryDataTable[currentSample, SUMMARY_POSITION_COLUMN] = getWellPos(SamplePositionList[currentSample + NUMBER_OF_SPECIAL_SAMPLES]);
+
+                    // set sampleID
+                    SummaryDataTable[currentSample, SUMMARY_SAMPLE_NAME_COLUMN] = SampleNameList[currentSample + NUMBER_OF_SPECIAL_SAMPLES];
+
+                    // check if all 3 columns are negative
+                    if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == NEGATIVE)
+                    {
+                        // if all 3 columns are negative, negative will be written only 1 time (in mrsa column for example)
+                        result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
+                    }
+
+                    // check if one of the 3 columns is invalid sample
+                    else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == INVALID_SAMPLE)
+                    {
+                        // invalid sample will be written only 1 time
+                        result = INVALID_SAMPLE_SUMMARY;
+                    }
+
+                    // check if one of the 3 columns is pcr failed  
+                    else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == PCR_Failed)
+                    {
+                        // pcr failed will be written only 1 time
+                        result = PCR_Failed;
+                    }
+
+                    else
+                    {
+                        // if MRSA is negative, don't write it to result 
+                        if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] != NEGATIVE)
+                        {
+                            result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
+                            result += ", ";
+                        }
+
+                        // if VRE is negative, don't write it to result 
+                        if (DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] != NEGATIVE)
+                        {
+                            result += DetailsDataTable[currentSample, DETAILS_VRE_COLUMN];
+                            result += ", ";
+                        }
+
+                        // if KPC is negative, don't write it to result 
+                        if (DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] != NEGATIVE)
+                        {
+                            result += DetailsDataTable[currentSample, DETAILS_KPC_COLUMN];
+                        }
+
+                    }
+
+                    SummaryDataTable[currentSample, SUMMARY_RESULT_COLUMN] = result;
+                    result = "";
+                }
+
+
+                return SummaryDataTable;
+
+            string[,] SummaryDataTable1 = new string[1, 1];
             SummaryColumnHeaders = new string[1];
             SummaryColumnHeaders[0] = "Not available for this kit.";
-            return SummaryDataTable;
+            return SummaryDataTable1;
+            
+            */
         }
 
     }

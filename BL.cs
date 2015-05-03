@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace Template
 {
     public class BL
     {
 
+        public const string POS = "Pos";
+        public const string NEG = "-";
 
         //General
         public static List<MappedSignalTarget> Map(List<Signal> signals, List<Target> targets, bool isMutant = false)
         {
             List<MappedSignalTarget> returnModels = new List<MappedSignalTarget>();
+
             foreach (var signal in signals)
             {
                 Target target;
@@ -93,11 +97,31 @@ namespace Template
             }
             return returnModels;
         }
-        public static List<PatRes> PathogenAnalyze(List<Signal> signals, List<Target> targets, string[] SampleNameList = null)
+
+
+        public static List<PatRes> PathogenAnalyze(List<Signal> signals, List<Target> targets, string acronim, string[] SampleNameList = null)
         {
-            targets = CustomValues.CustomizeGC2(targets);
-            List<MinSigControl> minSigControls = CustomValues.GetGC2MinSigControl();
+            List<MinSigControl> minSigControls = new List<MinSigControl>();
+            if (acronim == "ST6")//new kit
+            {
+                targets = CustomValues.CustomizeST6(targets);//new kit
+                minSigControls = CustomValues.GetST6MinSigControl();//new kit
+            }
+            if (acronim == "GC2" || acronim == "GCQ" || acronim == "GI2")
+            {
+                targets = CustomValues.CustomizeGC2(targets);
+                minSigControls = CustomValues.GetGC2MinSigControl();
+            }
+
+            if (acronim == "GCT")
+            {
+                targets = CustomValues.CustomizeGCT(targets);
+                minSigControls = CustomValues.GetGC2MinSigControl();
+
+            }
+
             List<MappedSignalTarget> mappedSignalTargets = BL.Map(signals, targets);
+
 
             List<PatRes> GC2Ress = new List<PatRes>();
             foreach (var item in mappedSignalTargets)
@@ -117,10 +141,10 @@ namespace Template
                 };
 
                 if (item.Value >= minSigControl.MinimunSignal &&
-                    item.ControlValue >= minSigControl.MinimumRatio)
-                    analyzeResult.Inter = "POS";
+                    item.Value >= minSigControl.MinimumRatio * item.ControlValue )
+                    analyzeResult.Inter = POS;
                 else
-                    analyzeResult.Inter = "NEG";
+                    analyzeResult.Inter = "-";
                 GC2Ress.Add(analyzeResult);
             }
             return GC2Ress;
@@ -189,6 +213,7 @@ namespace Template
         public static string mutGeneric(double Green, double Red, double GreenControl, double RedControl, double ScaleFactor)
         {
             string ReturnedValue;
+
 
             const double MIN_SIGNAL_LEVEL = 1.5;
             const double MinSignal = 1500;
@@ -441,7 +466,7 @@ namespace Template
             int reporterColumns = 5;
             int sampleRows = 0;
             foreach (var item in models)
-                if(sampleRows < item.Capture)
+                if (sampleRows < item.Capture)
                 {
                     sampleRows = item.Capture;
                 }
@@ -499,6 +524,133 @@ namespace Template
 
             return returnArray;
         }
+        public static string[,] ConvertAnalyzeResultToLegendAnalyzeArray(List<PatRes> models, int[] SamplePositionList, string controlTarget = null)
+        {
+            int reporterColumns = 5;
+            int extraColumns = 2;
+            int anchorColumn = 0;
+            int anchorRow = 0;
+            List<List<PatRes>> lists = new List<List<PatRes>>();
+            int reporters = models.Select(x => x.Reporter).Distinct().Count();
+
+            //Order the model
+            models = models.OrderBy(x => x.SampleIndex).ThenBy(x => x.Reporter).ToList();
+
+            //create list of lists from the model
+            foreach (var item in models.Select(x => new { Sample = x.SampleIndex, x.Reporter }).Distinct())
+                lists.Add(models.Where(x => x.Reporter == item.Reporter && x.SampleIndex == item.Sample).ToList());
+
+            //create the array
+            int samples = models.Select(x => x.SampleIndex).Distinct().Count();
+            string[,] returnArray = new string[GetLongestListItems(lists) * samples, reporters * reporterColumns + extraColumns];
+
+
+            foreach (var list in lists)
+            {
+                int currentColumn = anchorColumn * reporterColumns;
+
+                var controlTargetEntity = list.FirstOrDefault(x => x.SampleIndex == 1 && x.TargetName == controlTarget);
+                if (controlTargetEntity != null)
+                    AddTargetToArray(SamplePositionList, anchorColumn, returnArray, currentColumn, controlTargetEntity, anchorRow);
+
+                int rowIndex = 0;
+                foreach (var target in list)
+                {
+                    int currentRow = anchorRow + rowIndex;
+                    if (target.SampleIndex != 1)
+                        AddTargetToArray(SamplePositionList, anchorColumn, returnArray, currentColumn, target, currentRow);
+                    rowIndex++;
+                }
+
+                //jump to next sample
+                if ((anchorColumn + 1) % reporters == 0)
+                {
+                    anchorRow += GetLongestListItems(lists);
+                    anchorColumn = 0;
+                }
+                else
+                    anchorColumn++;
+            }
+
+            return returnArray;
+        }
+        private static void AddTargetToArray(int[] SamplePositionList, int anchorColumn, string[,] returnArray, int currentColumn, PatRes target, int currentRow)
+        {
+            if (anchorColumn == 0)
+            {
+                returnArray[currentRow, currentColumn + 0] = SamplePositionList == null ? "" : SamplePositionList[target.SampleIndex - 1].ToString();
+                returnArray[currentRow, currentColumn + 1] = target.SampleIndex.ToString();
+            }
+
+            if (target.SampleIndex == 1)
+            {
+                returnArray[currentRow, currentColumn + 0] = SamplePositionList == null ? "" : SamplePositionList[target.SampleIndex - 1].ToString();
+                returnArray[currentRow, currentColumn + 1] = "PC";
+            }
+
+
+            returnArray[currentRow, currentColumn + 2] = target == null ? "" : target.TargetName;
+            returnArray[currentRow, currentColumn + 3] = target == null ? "" : target.Color.ToString();
+            returnArray[currentRow, currentColumn + 4] = target == null ? "" : target.Value.ToString("0");
+            returnArray[currentRow, currentColumn + 5] = target == null ? "" : target.ControlValue.ToString("0");
+            returnArray[currentRow, currentColumn + 6] = target == null ? "" : target.Inter;
+
+        }
+        private static int GetLongestListItems(List<List<PatRes>> lists)
+        {
+            int longestListItems = 0;
+            foreach (var list in lists)
+                if (list.Count() > longestListItems)
+                    longestListItems = list.Count();
+            return longestListItems;
+        }
+        private static int GetMaxReporterRowsForSmaple(List<PatRes> list, int sampleIndex)
+        {
+            int maxReporterRows = 0;
+            foreach (var target in list.Where(x => x.SampleIndex == sampleIndex))
+                if (list.Count() > maxReporterRows)
+                    maxReporterRows = list.Count();
+            return maxReporterRows;
+        }
+        public static List<Signal> AddPad(List<Signal> signals)
+        {
+            /*
+                XDocument xdoc = XDocument.Load("data.xml");
+
+            var SampleDataList = from lv1 in xdoc.Descendants("SESSION").Descendants("PROTOCOL").Descendants("SAMPLES_LIST_NAME").Descendants("SAMPLE_DATA")
+            select new { 
+               SAMPLE_NAME = lv1.Attribute("SAMPLE_NAME").Value,
+               WELL_ID = lv1.Attribute("WELL_ID")
+           };
+
+            foreach (var signal in signals)
+	{
+            SampleDataList.First(x=>x.SAMPLE_NAME == signal.)
+
+	}
+
+            var samplesDataList = xdoc.Descendants("SESSION").Descendants("PROTOCOL").Descendants("SAMPLES_LIST_NAME").Descendants("SAMPLE_DATA").Select new{};
+            foreach (var sample in samplesDataList)
+	{
+                if (sample.Descendants("SAMPLE_NAME").
+	{
+		 
+	}
+	}
+
+            var stages = xdoc.Descendants("SESSION").Descendants("PROTOCOL").Descendants("PROCESS").Descendants("STAGE");
+            foreach (var stage in stages)
+	{
+                if(stage.Descendants(""))
+	}
+            foreach (var signal in signals)
+            {
+                signal.SampleIndex
+            }*/
+            return signals;
+        }
+
+         
         //details
         public static string[,] ConvertAnalyzeResultToDetailsArrayMutation(List<MutRes> analyzeResults, string[] SampleNameList, int[] SamplePositionList)
         {
@@ -525,23 +677,28 @@ namespace Template
             int samplesCount = analyzeResults.Select(x => x.SampleIndex).Distinct().Count();
             string[,] DetailsDataTable = new string[samplesCount, patogenCount + 1];
 
+            List<PatRes> arrangedList = new List<PatRes>();
+            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.bacteria).OrderBy(x => x.TargetName));
+            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.Parasite).OrderBy(x => x.TargetName));
+            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.undefined).OrderBy(x => x.TargetName));
+
             for (int sample = 1; sample <= samplesCount; sample++)
             {
                 DetailsDataTable[sample - 1, 0] = sample.ToString();
-                if (analyzeResults.Where(x => x.SampleIndex == sample && x.Inter == "NEG").Count() == patogenCount)
+                if (arrangedList.Where(x => x.SampleIndex == sample && x.Inter == "-").Count() == patogenCount)
                     for (int patogen = 1; patogen <= patogenCount; patogen++)
                         DetailsDataTable[sample - 1, patogen] = "X";
                 else
                 {
                     int patogenIndex = 1;
-                    foreach (var patogen in analyzeResults.Where(x => x.SampleIndex == sample))
+                    foreach (var patogen in arrangedList.Where(x => x.SampleIndex == sample))
                     {
                         DetailsDataTable[sample - 1, patogenIndex] = patogen.Inter;
                         patogenIndex++;
                     }
                 }
-
             }
+
             return DetailsDataTable;
         }
         //FromBRCA
@@ -562,7 +719,7 @@ namespace Template
 
             return 0;
         }
-        public static string[,] ReftoArray(List<RefResult> list, int columns)
+        public static string[,] ReftoArray(List<MutRefResult> list, int columns)
         {
 
             string[,] res = new string[list.Count, columns];
@@ -609,7 +766,7 @@ namespace Template
                 res[r, c] = finalData[r][c];
         return res;*/
         }
-        internal static bool IsMutationPass(RefResult entity)
+        internal static bool IsMutationPass(MutRefResult entity)
         {
             if (entity.GMinusBkg > 1500 &&
                 entity.RMinBkg > 1500 &&
@@ -620,7 +777,21 @@ namespace Template
             return false;
         }
 
+        //Base
+        public static string[,] ConvertDictionaryTo2dStringArray(Dictionary<string, string> Dictionary)
+        {
+            string[,] stringArray2d = new string[Dictionary.Count,2];
+            int i = 0;
 
+            foreach (KeyValuePair<string, string> item in Dictionary)
+            {
+                stringArray2d[i,0] = item.Key;
+                stringArray2d[i,1] = item.Value;
+                i++;
+            }
+
+            return stringArray2d;
+        }
 
 
     }

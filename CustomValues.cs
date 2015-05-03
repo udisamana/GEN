@@ -6,8 +6,9 @@ using TemplateLib;
 
 namespace Template
 {
-    public class CustomValues
+    public static class CustomValues
     {
+        public const string ExtractionControl = "Extraction Control";
 
         public const string DF = "Df";
         public const string CRYPTO = "Crypto";
@@ -21,10 +22,106 @@ namespace Template
         public const string CJEJUNI = "C.jejuni";   //mapA
         public const string NVC = "NVC";
 
+        // new kit = CONSTANTS, kit targets in minSig sheet, from layouts
+        //ST6
+        public const string GYRA = "gyrA";
+        public const string GAP = "gap";
+        public const string UREAE = "UreaE";
+        public const string HCT = "hct";
+        public const string PBPB = "pbpb";
+        public const string OPA = "opa";
+        public const string ORF1 = "orf1";
+        public const string _18S = "18S";
+        public const string BGLOBIN = "B-Globin";
+
+
 
         //reference
+        internal static List<Target> CustomizeST6(List<Target> originalPatogens)//new kit - adding the red and ALL controls (red+green) from thr matrix
+        {
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 2,
+        Color = Colors.Green,
+        isControl = true,
+        Reporter = 1,
+    });
+
+            originalPatogens.Add(
+            new Target()
+    {
+        Capture = 1,
+        Color = Colors.Green,
+        isControl = true,
+        Reporter = 2,
+    });
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 3,
+});
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 4,
+});
+
+
+
+            /////
+            originalPatogens.Add(
+                new Target()
+                {
+                    Capture = 1,
+                    Color = Colors.Red,
+                    isControl = false,
+                    Name = _18S,
+                    Reporter = 1,
+                });
+
+
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 2,
+        Color = Colors.Red,
+        isControl = true,
+        Reporter = 1,
+        ControlPatogenName = _18S
+
+    });
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Red,
+    isControl = true,
+    Reporter = 4,
+    ControlPatogenName = BGLOBIN
+});
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 2,
+        Color = Colors.Red,
+        isControl = false,
+        Name = BGLOBIN,
+        Reporter = 4
+    });
+
+            return originalPatogens;
+        }
         internal static List<Target> CustomizeGC2(List<Target> originalPatogens)
         {
+            //when there is more then one control in the reporter
             originalPatogens.RemoveAll(x => x.Reporter == 2 && x.isControl == true);
             originalPatogens.RemoveAll(x => x.Reporter == 5 && x.isControl == true);
 
@@ -110,6 +207,195 @@ new Target()
     Reporter = 5,
     ControlPatogenName = SAL
 });
+
+
+
+            return originalPatogens;
+        }
+        internal static List<Target> CustomizeGCT(List<Target> originalPatogens)
+        {
+            originalPatogens.RemoveAll(x => x.Reporter == 2 && x.isControl == true);
+            originalPatogens.RemoveAll(x => x.Reporter == 5 && x.isControl == true);
+
+            originalPatogens.Add(
+                new Target()
+                {
+                    Capture = 1,
+                    Color = Colors.Red,
+                    isControl = false,
+                    Name = DF,
+                    Reporter = 1,
+                });
+
+
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 2,
+        Color = Colors.Red,
+        isControl = true,
+        Reporter = 1,
+
+    });
+
+            //
+
+
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 1,
+        Color = Colors.Red,
+        isControl = false,
+        Name = DF,
+        Reporter = 2,
+    });
+
+
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 2,
+        Color = Colors.Red,
+        isControl = true,
+        Reporter = 2,
+
+    });
+
+            //
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Red,
+    isControl = true,
+    Reporter = 3
+});
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 3,
+        Color = Colors.Red,
+        isControl = false,
+        Name = GIA,
+        Reporter = 3
+    });
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 1,
+        Color = Colors.Green,
+        isControl = true,
+        Reporter = 3
+    });
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 3,
+    ControlPatogenName = NVC
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 3,
+    ControlPatogenName = CJEJUNI
+});
+            //
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Red,
+    isControl = true,
+    Reporter = 4
+});
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 3,
+        Color = Colors.Red,
+        isControl = false,
+        Name = GIA,
+        Reporter = 4
+    });
+            originalPatogens.Add(
+    new Target()
+    {
+        Capture = 1,
+        Color = Colors.Green,
+        isControl = true,
+        Reporter = 4
+    });
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 4,
+    ControlPatogenName = NVC
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 4,
+    ControlPatogenName = CJEJUNI
+});
+
+            //
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 3,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 7,
+    ControlPatogenName = SHI
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 4,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 7,
+    ControlPatogenName = SAL
+});
+
+            //
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 3,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 8,
+    ControlPatogenName = SHI
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 4,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 8,
+    ControlPatogenName = SAL
+});
+
+
 
 
 
@@ -211,6 +497,40 @@ new Target()
 
             return MinSigControls;
         }
+        internal static List<MinSigControl> GetST6MinSigControl()// new kit - from minSig sheet. Layouts File
+        {
+            List<MinSigControl> MinSigControls = new List<MinSigControl>();
+
+            MinSigControls.Add(new MinSigControl() { TargetName = GYRA, Capture = 1, PadCont = 2, MinimunSignal = 6000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = GAP, Capture = 1, PadCont = 4, MinimunSignal = 5500, MinimumRatio = 11 });
+            MinSigControls.Add(new MinSigControl() { TargetName = UREAE, Capture = 3, PadCont = 2, MinimunSignal = 5000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = HCT, Capture = 1, PadCont = 4, MinimunSignal = 5000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = PBPB, Capture = 4, PadCont = 2, MinimunSignal = 5800, MinimumRatio = 9 });
+            MinSigControls.Add(new MinSigControl() { TargetName = OPA, Capture = 4, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = ORF1, Capture = 2, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 6 });
+            MinSigControls.Add(new MinSigControl() { TargetName = _18S, Capture = 2, PadCont = 3, MinimunSignal = 5500, MinimumRatio = 11 });
+            MinSigControls.Add(new MinSigControl() { TargetName = BGLOBIN, Capture = 3, PadCont = 4, MinimunSignal = 4000, MinimumRatio = 5 });
+
+            return MinSigControls;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //factors
@@ -437,6 +757,156 @@ new Target()
             return factor;
         }
 
+        public static string GetControlTarget(string acronym)
+        {
+            switch (acronym)
+            {
+                case ("GC2"):
+                    return "NVC";
+                case ("GCQ"):
+                    return "NVC";
+                case ("GI2"):
+                    return "NVC";
+                default:
+                    return null;
+            }
+        }
+        internal static TargetType GetTargetTypeByTarget(string targetName)
+        {
+            switch (targetName)
+            {
+                case ("Bh"):
+                    return TargetType.Parasite;
+                case (CRYPTO):
+                    return TargetType.Parasite;
+                case ("Sal"):
+                    return TargetType.bacteria;
+                case ("Ed"):
+                    return TargetType.Parasite;
+                case ("Eh"):
+                    return TargetType.Parasite;
+                case ("C.jejuni"):
+                    return TargetType.bacteria;
+                case ("C.coli"):
+                    return TargetType.bacteria;
+                case ("Shi"):
+                    return TargetType.bacteria;
+                case ("Gia"):
+                    return TargetType.Parasite;
+                case ("Df"):
+                    return TargetType.Parasite;
 
+                default:
+                    return TargetType.undefined;
+            }
+        }
+
+        public static string GetTargetFullNameByTarget(string targetName) // new kit
+        {
+
+
+            switch (targetName)
+            {
+                case (BH):
+                    return "Blastocystis hominis";
+                case (CRYPTO):
+                    return "Cryptosporidium spp.";
+                case (SAL):
+                    return "Salmonella enterica";
+                case (ED):
+                    return "Entamoeba dispar";
+                case (EH):
+                    return "Entamoeba histolytica";
+                case (CJEJUNI):
+                    return "Campylobacter jejuni";
+                case (CCOLI):
+                    return "Campylobacter coli";
+                case (SHI):
+                    return "Shigella spp./EIEC";
+                case (GIA):
+                    return "Giardia lamblia";
+                case (DF):
+                    return "Dientamoeba fragilis";
+                case (GYRA):
+                    return "Mycoplasma genitalium";
+                case (GAP):
+                    return "Mycoplasma hominis";
+                case (UREAE):
+                    return "Ureaplasma urealyticum/parvum";
+                case (HCT):
+                    return "Chlamydia trachomatis";
+                case (PBPB):
+                    return "Chlamydia trachomatis";
+                case (OPA):
+                    return "Neisseria gonorrhoeae";
+                case (ORF1):
+                    return "Neisseria gonorrhoeae";
+                case (_18S):
+                    return "Trichomonas vaginalis";
+                case (BGLOBIN):
+                    return ExtractionControl;
+
+
+
+
+
+
+
+
+
+                default:
+                    return targetName;
+
+
+            }
+        }
+
+
+
+
+
+        internal static bool isST6PatogenPass(string name, decimal minBkg, decimal divBkg) // new kit - from ReferanceMinSig sheet. Layouts File
+        {
+            switch (name)
+            {
+                case GYRA:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case GAP:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case UREAE:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case HCT:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case PBPB:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case OPA:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case ORF1:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case _18S:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+                case BGLOBIN:
+                    if (minBkg < 10000 || divBkg < 12)
+                        return false;
+                    return true;
+            }
+            return false;
+        }
     }
 }

@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Template</RootNamespace>
-    <AssemblyName>TSD</AssemblyName>
+    <AssemblyName>ST6</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="SystemConfiguration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\idan\NNC400_93_Idan 28.8.2013 - Infection diseases\TemplateLib\bin\Debug\SystemConfiguration.dll</HintPath>
@@ -75,21 +76,65 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="XMLs\CFQ\ILL1000\CFQTemplate.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST6Template.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST6_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN.xml" />
+    <Content Include="XMLs\Loading Pattern\192 Samples\2 Captures.xml" />
+    <Content Include="XMLs\Loading Pattern\96 Samples\2 Captures.xml" />
+    <Content Include="XMLs\Loading Pattern\96 Samples\3 Captures.xml" />
+    <EmbeddedResource Include="XMLs\Loading Pattern\96 Samples\Full Divide\3 Captures.xml" />
+    <Content Include="XMLs\Loading Pattern\96 Samples\Full Divide\4 Captures.xml" />
+    <Content Include="XMLs\Loading Pattern\NanoChip\NC ST6 LP.xml" />
+    <Content Include="XMLs\Loading Pattern\מקרו קפיצת שורות באקסל.txt" />
+    <EmbeddedResource Include="XMLs\GI2\GI2Template.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN-onePart.xml" />
+    <EmbeddedResource Include="XMLs\STT\STTTemplate.xml" />
+    <EmbeddedResource Include="XMLs\STT\STT_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3Template.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\CFQ\CFQTemplate.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\CFQ\CFQ_LOADINGPATTERN.xml" />
+    <Content Include="XMLs\GENERAL\2wells192samples.xml" />
+    <Content Include="XMLs\GENERAL\2wells96samples.xml" />
+    <EmbeddedResource Include="XMLs\GCQ\GCQTemplate.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\GCQ\GCQ_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GCQ\Archive\GCQTemplate.xml" />
+    <EmbeddedResource Include="XMLs\GCQ\Archive\GCQ_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GCW\GCWTemplate.xml" />
+    <EmbeddedResource Include="XMLs\GCW\GCW_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GCT\GCTTemplate.xml" />
+    <EmbeddedResource Include="XMLs\GCT\GCT_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GC2\ARCHIVE\GC2Template60.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="XMLs\AJP\AJPTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="XMLs\AJP\AJP_LOADINGPATTERN.xml">
+    <EmbeddedResource Include="XMLs\AJP\AJP_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\TSD\TSD_LOADINGPATTERN.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TSD_LOADINGPATTERN.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TSDTemplate.xml">
+    <EmbeddedResource Include="XMLs\TSD\TSDTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XMLs\GC2\GC2_LOADINGPATTERN.xml" />
-    <EmbeddedResource Include="XMLs\GC2\GC2Template.xml" />
-    <EmbeddedResource Include="XMLs\CFN\CFN_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\GC2\GC2Template.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\CFN\CFN_LOADINGPATTERN.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="XMLs\CFN\CFNTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -98,7 +143,11 @@
     <Content Include="Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XMLs\TSD\" />
+    <Folder Include="XMLs\ST3\192Samples\" />
+    <Folder Include="XMLs\ST6\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
