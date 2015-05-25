@@ -23,9 +23,9 @@ using CRC;
 using System.Collections;
 using Template;
 
-namespace ST6 // new kit
+namespace CFN // new kit
 {
-    public class ST6 : TPL_BaseTemplate // new kit
+    public class CFN : TPL_BaseTemplate // new kit
     {
 
 
@@ -37,7 +37,6 @@ namespace ST6 // new kit
 
         // const of marker names
 
-
         public const string ExtractionControl = "Extraction Control";
         public const string Negative = "Negative";
         public const string Invalid = "Invalid";
@@ -45,7 +44,6 @@ namespace ST6 // new kit
         public const int NUMBEROFCOLORS = 2;
         public List<PatogenReferanceResult> patogenRefResults = new List<PatogenReferanceResult>();
         public List<MutRefResult> mutRfResults = new List<MutRefResult>();
-
 
         public const string HIS1 = "HIS1";
         public const string HIS2 = "HIS2";
@@ -1465,7 +1463,7 @@ namespace ST6 // new kit
             {
                 PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
             }
-            if(kitType == "Mutation")
+            if (kitType == "Mutation")
             {
                 MutRess = BL.MutationAnalyze(signalList, targets, acronym, SampleNameList);
             }
@@ -1477,42 +1475,31 @@ namespace ST6 // new kit
 
             foreach (var sample in SampleNameList)
             {
-
-
-
                 string sampleTargets = string.Empty;
                 if (kitType == "Pathogen")
                 {
-                    foreach (var target in PatRess.Where(x => x.SampleName == sample && x.Inter == POS))
-                    {
-                        if (patogenRefResults.Where(x => x.Reporter == target.Reporter).Any(x => x.IsPass == false))
-                            sampleTargets = "RE-TEST";
-                        else
-                        {
-                            sampleTargets += CustomValues.GetTargetFullNameByTarget(target.TargetName);
-                            sampleTargets += ", ";
-                        }
-                    }
+                    sampleTargets = getTargetSummery(PatRess, sample, sampleTargets);
                 }
                 if (kitType == "Mutation")
                 {
-                    foreach (var target in MutRess.Where(x => x.SampleName == sample && x.Call != "-"))
-                    {
-                        if (mutRfResults.Where(x => x.Reporter == target.Reporter).Any(x => x.IsMutantPass == false))
-                            sampleTargets = "RE-TEST";
-                        else
-                        {
-                            sampleTargets += CustomValues.GetTargetFullNameByTarget(target.TargetName);
-                            sampleTargets += ", ";
-                        }
-                    }
+                    sampleTargets = getTargetSummery(MutRess, sample, sampleTargets);
                 }
 
                 if (sampleTargets != string.Empty)
                     sampleTargets = sampleTargets.Remove(sampleTargets.Length - 2);
 
-                if (sampleTargets == string.Empty)
-                    sampleTargets = Invalid;
+                if (kitType == "Mutation")
+                {
+                    if (sampleTargets == string.Empty)
+                        sampleTargets = "No Mutation Detected";
+                }
+
+                if (kitType == "Pathogen")
+                {
+                    if (sampleTargets == string.Empty)
+                        sampleTargets = INVALID;
+                }
+
 
                 if (sampleTargets == ExtractionControl)
                     sampleTargets = Negative;
@@ -1520,7 +1507,7 @@ namespace ST6 // new kit
 
 
                 int index = sampleTargets.IndexOf(ExtractionControl);//remove the extraction control from targets
-                if(index > 0)
+                if (index > 0)
                     sampleTargets = sampleTargets.Remove(index, ExtractionControl.Length);
 
                 ress.Add(sample, sampleTargets);
@@ -1528,119 +1515,184 @@ namespace ST6 // new kit
 
             return (BL.ConvertDictionaryTo2dStringArray(ress));
 
-            /*
-                int currentPosition = 0;
-                int currentSample = 0;
-                int row = 0;
-                int column = 0;
+        }
 
-                // get number of pads
-                int numberOfMarkers = signals.GetLength(MARKER_LIST);
+        private string getTargetSummery(List<PatRes> PatRess, string sample, string sampleTargets)
+        {
+            foreach (var patRes in PatRess.Where(x => x.SampleName == sample && x.Inter == POS))
+            {
+                sampleTargets = checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(sampleTargets, patRes);
+            }
+            return sampleTargets;
+        }
+        private string getTargetSummery(List<MutRes> MutRess, string sample, string sampleTargets)
+        {
+            foreach (var mutRes in MutRess.Where(x => x.SampleName == sample && x.Call != "-"))
+            {
+                sampleTargets += mutRes.TargetName;
+                sampleTargets += ", ";
+            }
+            return sampleTargets;
+        }
 
-                // get number of samples
-                int numberOfSampleList = signals.GetLength(SAMPLE_LIST);
+        private string checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(string sampleTargets, PatRes patRes)
+        {
+            sampleTargets += CustomValues.GetTargetFullNameByTarget(patRes.TargetName);
 
+            //find false referance
+            var refRess = patogenRefResults.Where(x => x.Reporter == patRes.Reporter && x.isControl == false).ToList();
 
-                // init size from enum
-                int EnumSizeSummarylColumnsNames = Enum.GetNames(typeof(SummaryColumnsNames)).Length;
+            if (refRess.FirstOrDefault().IsMixPass == false)
+            {
+                sampleTargets += "(Ref Fail RE-TEST: ";
 
-                // set headlines of the table        
-                SummaryColumnHeaders = new string[EnumSizeSummarylColumnsNames];
+                var duplicateTargets = refRess.GroupBy(x => x.Name)
+               .Where(g => g.Count() > 1)
+               .Select(y => y.Key)
+               .ToList();
+                var duplicateTargetsString = String.Join(", ", duplicateTargets.ToArray());
 
-                // set name for each parameter 
-                for (currentPosition = 0; currentPosition < SummaryColumnHeaders.Length; currentPosition++)
-                {
-                    SummaryColumnHeaders[currentPosition] = Enum.GetName(typeof(SummaryColumnsNames), currentPosition);
-                }
+                sampleTargets += duplicateTargetsString;
 
-                // get data from analyze
-                string[,] DetailsDataTable = Details(signals, out DetailsColumnHeaders, SampleNameList, SamplePositionList, referenceSignalsData, backgroundSignals);
+                sampleTargets += ")";
+            }
+            //
 
-                // set the size of SummaryDataTable 
-                string[,] SummaryDataTable = new string[numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES, EnumSizeSummarylColumnsNames];
+            sampleTargets += ", ";
 
+            return sampleTargets;
+        }
+        private string checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(string sampleTargets, MutRes mutRes)
+        {
+            sampleTargets += CustomValues.GetTargetFullNameByTarget(mutRes.TargetName);
 
-                for (column = 0; column < SummaryDataTable.GetLength(COLUMN_SIZE); column++)
-                {
-                    for (row = 0; row < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; row++)
-                    {
-                        SummaryDataTable[row, column] = "";
-                    }
-                }
+            //find false referance
+            var refRess = mutRfResults.Where(x => x.Reporter == mutRes.Reporter);
 
-                string result = "";
+            if (refRess.Any(x => x.IsMutantPass == false))
+            {
+                sampleTargets += "(RE-TEST)";
+            }
+            //
 
-                for (currentSample = 0; currentSample < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; currentSample++)
-                {
-                    // set index
-                    SummaryDataTable[currentSample, SUMMARY_INDEX_COLUMN] = (currentSample + 1).ToString();
+            sampleTargets += ", ";
 
-                    // set position
-                    SummaryDataTable[currentSample, SUMMARY_POSITION_COLUMN] = getWellPos(SamplePositionList[currentSample + NUMBER_OF_SPECIAL_SAMPLES]);
-
-                    // set sampleID
-                    SummaryDataTable[currentSample, SUMMARY_SAMPLE_NAME_COLUMN] = SampleNameList[currentSample + NUMBER_OF_SPECIAL_SAMPLES];
-
-                    // check if all 3 columns are negative
-                    if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == NEGATIVE)
-                    {
-                        // if all 3 columns are negative, negative will be written only 1 time (in mrsa column for example)
-                        result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
-                    }
-
-                    // check if one of the 3 columns is invalid sample
-                    else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == INVALID_SAMPLE)
-                    {
-                        // invalid sample will be written only 1 time
-                        result = INVALID_SAMPLE_SUMMARY;
-                    }
-
-                    // check if one of the 3 columns is pcr failed  
-                    else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == PCR_Failed)
-                    {
-                        // pcr failed will be written only 1 time
-                        result = PCR_Failed;
-                    }
-
-                    else
-                    {
-                        // if MRSA is negative, don't write it to result 
-                        if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] != NEGATIVE)
-                        {
-                            result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
-                            result += ", ";
-                        }
-
-                        // if VRE is negative, don't write it to result 
-                        if (DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] != NEGATIVE)
-                        {
-                            result += DetailsDataTable[currentSample, DETAILS_VRE_COLUMN];
-                            result += ", ";
-                        }
-
-                        // if KPC is negative, don't write it to result 
-                        if (DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] != NEGATIVE)
-                        {
-                            result += DetailsDataTable[currentSample, DETAILS_KPC_COLUMN];
-                        }
-
-                    }
-
-                    SummaryDataTable[currentSample, SUMMARY_RESULT_COLUMN] = result;
-                    result = "";
-                }
-
-
-                return SummaryDataTable;
-
-            string[,] SummaryDataTable1 = new string[1, 1];
-            SummaryColumnHeaders = new string[1];
-            SummaryColumnHeaders[0] = "Not available for this kit.";
-            return SummaryDataTable1;
-            
-            */
+            return sampleTargets;
         }
 
     }
 
 }
+
+
+/*
+           int currentPosition = 0;
+           int currentSample = 0;
+           int row = 0;
+           int column = 0;
+
+           // get number of pads
+           int numberOfMarkers = signals.GetLength(MARKER_LIST);
+
+           // get number of samples
+           int numberOfSampleList = signals.GetLength(SAMPLE_LIST);
+
+
+           // init size from enum
+           int EnumSizeSummarylColumnsNames = Enum.GetNames(typeof(SummaryColumnsNames)).Length;
+
+           // set headlines of the table        
+           SummaryColumnHeaders = new string[EnumSizeSummarylColumnsNames];
+
+           // set name for each parameter 
+           for (currentPosition = 0; currentPosition < SummaryColumnHeaders.Length; currentPosition++)
+           {
+               SummaryColumnHeaders[currentPosition] = Enum.GetName(typeof(SummaryColumnsNames), currentPosition);
+           }
+
+           // get data from analyze
+           string[,] DetailsDataTable = Details(signals, out DetailsColumnHeaders, SampleNameList, SamplePositionList, referenceSignalsData, backgroundSignals);
+
+           // set the size of SummaryDataTable 
+           string[,] SummaryDataTable = new string[numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES, EnumSizeSummarylColumnsNames];
+
+
+           for (column = 0; column < SummaryDataTable.GetLength(COLUMN_SIZE); column++)
+           {
+               for (row = 0; row < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; row++)
+               {
+                   SummaryDataTable[row, column] = "";
+               }
+           }
+
+           string result = "";
+
+           for (currentSample = 0; currentSample < numberOfSampleList - NUMBER_OF_SPECIAL_SAMPLES; currentSample++)
+           {
+               // set index
+               SummaryDataTable[currentSample, SUMMARY_INDEX_COLUMN] = (currentSample + 1).ToString();
+
+               // set position
+               SummaryDataTable[currentSample, SUMMARY_POSITION_COLUMN] = getWellPos(SamplePositionList[currentSample + NUMBER_OF_SPECIAL_SAMPLES]);
+
+               // set sampleID
+               SummaryDataTable[currentSample, SUMMARY_SAMPLE_NAME_COLUMN] = SampleNameList[currentSample + NUMBER_OF_SPECIAL_SAMPLES];
+
+               // check if all 3 columns are negative
+               if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == NEGATIVE && DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == NEGATIVE)
+               {
+                   // if all 3 columns are negative, negative will be written only 1 time (in mrsa column for example)
+                   result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
+               }
+
+               // check if one of the 3 columns is invalid sample
+               else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == INVALID_SAMPLE || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == INVALID_SAMPLE)
+               {
+                   // invalid sample will be written only 1 time
+                   result = INVALID_SAMPLE_SUMMARY;
+               }
+
+               // check if one of the 3 columns is pcr failed  
+               else if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] == PCR_Failed || DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] == PCR_Failed)
+               {
+                   // pcr failed will be written only 1 time
+                   result = PCR_Failed;
+               }
+
+               else
+               {
+                   // if MRSA is negative, don't write it to result 
+                   if (DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN] != NEGATIVE)
+                   {
+                       result = DetailsDataTable[currentSample, DETAILS_MRSA_COLUMN];
+                       result += ", ";
+                   }
+
+                   // if VRE is negative, don't write it to result 
+                   if (DetailsDataTable[currentSample, DETAILS_VRE_COLUMN] != NEGATIVE)
+                   {
+                       result += DetailsDataTable[currentSample, DETAILS_VRE_COLUMN];
+                       result += ", ";
+                   }
+
+                   // if KPC is negative, don't write it to result 
+                   if (DetailsDataTable[currentSample, DETAILS_KPC_COLUMN] != NEGATIVE)
+                   {
+                       result += DetailsDataTable[currentSample, DETAILS_KPC_COLUMN];
+                   }
+
+               }
+
+               SummaryDataTable[currentSample, SUMMARY_RESULT_COLUMN] = result;
+               result = "";
+           }
+
+
+           return SummaryDataTable;
+
+       string[,] SummaryDataTable1 = new string[1, 1];
+       SummaryColumnHeaders = new string[1];
+       SummaryColumnHeaders[0] = "Not available for this kit.";
+       return SummaryDataTable1;
+            
+       */

@@ -141,7 +141,7 @@ namespace Template
                 };
 
                 if (item.Value >= minSigControl.MinimunSignal &&
-                    item.Value >= minSigControl.MinimumRatio * item.ControlValue )
+                    item.Value / item.ControlValue >= minSigControl.MinimumRatio)
                     analyzeResult.Inter = POS;
                 else
                     analyzeResult.Inter = "-";

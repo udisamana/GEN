@@ -501,15 +501,15 @@ new Target()
         {
             List<MinSigControl> MinSigControls = new List<MinSigControl>();
 
-            MinSigControls.Add(new MinSigControl() { TargetName = GYRA, Capture = 1, PadCont = 2, MinimunSignal = 6000, MinimumRatio = 5 });
-            MinSigControls.Add(new MinSigControl() { TargetName = GAP, Capture = 1, PadCont = 4, MinimunSignal = 5500, MinimumRatio = 11 });
-            MinSigControls.Add(new MinSigControl() { TargetName = UREAE, Capture = 3, PadCont = 2, MinimunSignal = 5000, MinimumRatio = 5 });
-            MinSigControls.Add(new MinSigControl() { TargetName = HCT, Capture = 1, PadCont = 4, MinimunSignal = 5000, MinimumRatio = 3 });
-            MinSigControls.Add(new MinSigControl() { TargetName = PBPB, Capture = 4, PadCont = 2, MinimunSignal = 5800, MinimumRatio = 9 });
+            MinSigControls.Add(new MinSigControl() { TargetName = GYRA, Capture = 1, PadCont = 2, MinimunSignal = 5300, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = GAP, Capture = 1, PadCont = 4, MinimunSignal = 5300, MinimumRatio = 10 });
+            MinSigControls.Add(new MinSigControl() { TargetName = UREAE, Capture = 3, PadCont = 2, MinimunSignal = 5000, MinimumRatio = 4.5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = HCT, Capture = 1, PadCont = 4, MinimunSignal = 5000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = PBPB, Capture = 4, PadCont = 2, MinimunSignal = 5000, MinimumRatio = 9 });
             MinSigControls.Add(new MinSigControl() { TargetName = OPA, Capture = 4, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 5 });
-            MinSigControls.Add(new MinSigControl() { TargetName = ORF1, Capture = 2, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 6 });
-            MinSigControls.Add(new MinSigControl() { TargetName = _18S, Capture = 2, PadCont = 3, MinimunSignal = 5500, MinimumRatio = 11 });
-            MinSigControls.Add(new MinSigControl() { TargetName = BGLOBIN, Capture = 3, PadCont = 4, MinimunSignal = 4000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = ORF1, Capture = 2, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 5 });
+            MinSigControls.Add(new MinSigControl() { TargetName = _18S, Capture = 2, PadCont = 3, MinimunSignal = 5000, MinimumRatio = 10 });
+            MinSigControls.Add(new MinSigControl() { TargetName = BGLOBIN, Capture = 3, PadCont = 4, MinimunSignal = 6000, MinimumRatio = 7 });
 
             return MinSigControls;
         }
@@ -757,12 +757,14 @@ new Target()
             return factor;
         }
 
-        public static string GetControlTarget(string acronym)
+        public static string GetControlTarget(string acronym) //newkit pathogen
         {
             switch (acronym)
             {
                 case ("GC2"):
                     return "NVC";
+                case ("ST6"):
+                    return BGLOBIN;
                 case ("GCQ"):
                     return "NVC";
                 case ("GI2"):
