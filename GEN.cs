@@ -23,9 +23,9 @@ using CRC;
 using System.Collections;
 using Template;
 
-namespace CFN // new kit
+namespace ST6 // new kit
 {
-    public class CFN : TPL_BaseTemplate // new kit
+    public class ST6 : TPL_BaseTemplate // new kit
     {
 
 

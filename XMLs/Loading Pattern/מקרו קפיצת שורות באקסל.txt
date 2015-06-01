@@ -1,0 +1,5 @@
+Sub stam()
+For Row = 6 To 671 Step 7
+Debug.Print Cells(Row, 1).Text
+Next Row
+End Sub

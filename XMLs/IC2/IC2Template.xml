@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE CHECKSUM="21476">
+  <INFORMATION CREATEDBY="" CREAETDATE="16/07/2013 17:01:49" INFORMATION="ICP 17.7.13" VERSION="1.3" ACRONYM="IC2" DESCRIPTION="Second lesson" PADS_REUSES="1" WELLS_PER_SAMPLE="1" />
+  <PCR DIRECTORY="2" PROGRAM="1" />
+  <MATERIALS_CONFIGURATION>
+    <REAGENT_BOTTLES>
+      <REAGENT_BOTTLE LOCATION_ID="1" NAME="High Salt Buffer" TYPE="HSB" />
+      <REAGENT_BOTTLE LOCATION_ID="2" NAME="Low Salt Buffer" TYPE="LSB" />
+      <REAGENT_BOTTLE LOCATION_ID="3" NAME="Target Prep Buffer" TYPE="TPB" />
+      <REAGENT_BOTTLE LOCATION_ID="4" NAME="CapDown Buffer B" TYPE="CDB" />
+    </REAGENT_BOTTLES>
+    <REAGENT_PACKS>
+      <REAGENT_PACK LOCATION_ID="1" NAME="ICP cap rep mix pack" TYPE="ICB">
+        <CONTENT WELL="1" NAME="cap mix 1" TYPE="capture" />
+        <CONTENT WELL="2" NAME="cap mix 2" TYPE="capture" />
+        <CONTENT WELL="3" NAME="cap mix 3" TYPE="capture" />
+        <CONTENT WELL="4" NAME="cap mix 4" TYPE="capture" />
+        <CONTENT WELL="5" NAME="rep mix 1" TYPE="reporter" />
+        <CONTENT WELL="6" NAME="rep mix 2" TYPE="reporter" />
+        <CONTENT WELL="7" NAME="rep mix 3" TYPE="reporter" />
+        <CONTENT WELL="8" NAME="rep mix 4" TYPE="reporter" />
+      </REAGENT_PACK>
+      <REAGENT_PACK LOCATION_ID="2" NAME="ICP ref pack" TYPE="ICA">
+        <CONTENT WELL="1" NAME="ref 1" TYPE="reference" />
+        <CONTENT WELL="2" NAME="ref 2" TYPE="reference" />
+        <CONTENT WELL="3" NAME="ref 3" TYPE="reference" />
+      </REAGENT_PACK>
+    </REAGENT_PACKS>
+  </MATERIALS_CONFIGURATION>
+  <MAIN_DISEASES>
+    <DISEASES>
+      <DISEASE INFORMATION="ICP" DESCRIPTION="">
+        <MUTATION INFORMATION="mecA" REPORTER="1" CAPTURE="2" />
+        <MUTATION INFORMATION="Sccmec" REPORTER="3" CAPTURE="2" />
+        <MUTATION INFORMATION="nuc" REPORTER="2" CAPTURE="2" />
+        <MUTATION INFORMATION="spa" REPORTER="4" CAPTURE="2" />
+        <MUTATION INFORMATION="vanA/B" REPORTER="4" CAPTURE="3" />
+        <MUTATION INFORMATION="ddl-efs" REPORTER="1" CAPTURE="3" />
+        <MUTATION INFORMATION="ddl-efm" REPORTER="2" CAPTURE="3" />
+        <MUTATION INFORMATION="phoE" REPORTER="1" CAPTURE="4" />
+        <MUTATION INFORMATION="KPC" REPORTER="2" CAPTURE="4" />
+        <MUTATION INFORMATION="NVC" REPORTER="3" CAPTURE="4" />
+        <MUTATION INFORMATION="HIS1" REPORTER="1" CAPTURE="1" />
+        <MUTATION INFORMATION="HIS2" REPORTER="2" CAPTURE="1" />
+        <MUTATION INFORMATION="HIS3" REPORTER="3" CAPTURE="1" />
+        <MUTATION INFORMATION="HIS4" REPORTER="4" CAPTURE="1" />
+      </DISEASE>
+    </DISEASES>
+    <MUTATION_ASSIGNMENT>
+      <MUTATION INFORMATION="HIS1" REPORTER="1" CAPTURE="1" />
+      <MUTATION INFORMATION="mecA" REPORTER="1" CAPTURE="2" />
+      <MUTATION INFORMATION="ddl-efs" REPORTER="1" CAPTURE="3" />
+      <MUTATION INFORMATION="phoE" REPORTER="1" CAPTURE="4" />
+      <MUTATION INFORMATION="HIS2" REPORTER="2" CAPTURE="1" />
+      <MUTATION INFORMATION="nuc" REPORTER="2" CAPTURE="2" />
+      <MUTATION INFORMATION="ddl-efm" REPORTER="2" CAPTURE="3" />
+      <MUTATION INFORMATION="KPC" REPORTER="2" CAPTURE="4" />
+      <MUTATION INFORMATION="HIS3" REPORTER="3" CAPTURE="1" />
+      <MUTATION INFORMATION="Sccmec" REPORTER="3" CAPTURE="2" />
+      <MUTATION INFORMATION="NVC" REPORTER="3" CAPTURE="4" />
+      <MUTATION INFORMATION="HIS4" REPORTER="4" CAPTURE="1" />
+      <MUTATION INFORMATION="spa" REPORTER="4" CAPTURE="2" />
+      <MUTATION INFORMATION="vanA/B" REPORTER="4" CAPTURE="3" />
+    </MUTATION_ASSIGNMENT>
+  </MAIN_DISEASES>
+  <PROCESS>
+    <STAGE NAME="Empty_Cartridge/Wash Tip" INDEX="1" PARENT="Empty_Cartridge/Wash Tip" PARENT_ID="1">
+      <REPEAT>2</REPEAT>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="2" PARENT="Wash_And_Empty_Cartridge" PARENT_ID="2" />
+    <STAGE NAME="Set_Captures" INDEX="3" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3">
+      <NAME>cap mix 1</NAME>
+      <LOCATION>1</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="3" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3" />
+    <STAGE NAME="Set_Captures" INDEX="4" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3">
+      <NAME>cap mix 2</NAME>
+      <LOCATION>2</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="4" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3" />
+    <STAGE NAME="Set_Captures" INDEX="5" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3">
+      <NAME>cap mix 3</NAME>
+      <LOCATION>3</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="5" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3" />
+    <STAGE NAME="Set_Captures" INDEX="6" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3">
+      <NAME>cap mix 4</NAME>
+      <LOCATION>4</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="6" TYPE="capture" PARENT="Set_Captures" PARENT_ID="3" />
+    <STAGE NAME="Set_Captures" INDEX="11" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 1</NAME>
+      <LOCATION>11</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="11" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Set_Captures" INDEX="12" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 2</NAME>
+      <LOCATION>12</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="12" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Set_Captures" INDEX="13" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 3</NAME>
+      <LOCATION>13</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="13" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Set_Captures" INDEX="14" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 1</NAME>
+      <LOCATION>11</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="14" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Set_Captures" INDEX="15" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 2</NAME>
+      <LOCATION>12</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="15" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Set_Captures" INDEX="16" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11">
+      <NAME>ref 3</NAME>
+      <LOCATION>13</LOCATION>
+      <VOLUME>50</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>350</AMPLITUDE>
+        <DURATION>30</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Wash_And_Empty_Cartridge" INDEX="16" TYPE="reference" PARENT="Set_Captures" PARENT_ID="11" />
+    <STAGE NAME="Wash_Cartridge_+_Aspirate_and_Dispense_Sample" INDEX="23" PARENT="Aspirate_And_Dispense_Sample" PARENT_ID="5">
+      <LOCATION>4</LOCATION>
+      <REAGENT_VOLUME>44</REAGENT_VOLUME>
+      <VOLUME>6</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <REPEAT>1</REPEAT>
+      <REPEAT_WASH_CARTRIDGE>1</REPEAT_WASH_CARTRIDGE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>995</AMPLITUDE>
+        <DURATION>120</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Initial_Fill_Cartridge" INDEX="24" PARENT="Reporting" PARENT_ID="6">
+      <VOLUME>50</VOLUME>
+      <LOCATION>1</LOCATION>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Acquire_Background_Reference_Image" INDEX="25" PARENT="Reporting" PARENT_ID="6">
+      <REPEAT>1</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Empty_Cartridge/Set_Reporter" INDEX="26" PARENT="Reporting" PARENT_ID="6">
+      <VOLUME>50</VOLUME>
+      <LOCATION>5</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="27" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>60</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="28" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="28" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>57</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="29" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="29" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>54</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="30" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="30" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>51</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="31" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="31" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>48</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="32" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="32" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>46</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="33" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="33" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>44</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="34" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="34" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>42</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="35" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="35" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>40</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait/Wash_Cartridge_With_Reagent" INDEX="44" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>30</DURATION>
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="45" PARENT="Reporting" PARENT_ID="6">
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="46" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Image_Array" INDEX="47" PARENT="Reporting" PARENT_ID="6">
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="48" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>56</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="49" PARENT="Reporting" PARENT_ID="6">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="50" PARENT="Reporting" PARENT_ID="6">
+      <VOLUME>400</VOLUME>
+      <LOCATION>2</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="51" PARENT="Reporting" PARENT_ID="6">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Initial_Fill_Cartridge" INDEX="52" PARENT="Reporting" PARENT_ID="7">
+      <VOLUME>50</VOLUME>
+      <LOCATION>1</LOCATION>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Acquire_Background_Reference_Image" INDEX="53" PARENT="Reporting" PARENT_ID="7">
+      <REPEAT>1</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Empty_Cartridge/Set_Reporter" INDEX="54" PARENT="Reporting" PARENT_ID="7">
+      <VOLUME>50</VOLUME>
+      <LOCATION>6</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="55" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>59</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="56" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="56" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>56</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="57" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="57" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>53</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="58" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="58" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>50</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="59" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="59" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>47</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="60" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="60" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>44</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="61" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="61" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>42</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="62" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="62" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>40</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait/Wash_Cartridge_With_Reagent" INDEX="70" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>30</DURATION>
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="71" PARENT="Reporting" PARENT_ID="7">
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="72" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Image_Array" INDEX="73" PARENT="Reporting" PARENT_ID="7">
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="74" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>56</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="75" PARENT="Reporting" PARENT_ID="7">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="76" PARENT="Reporting" PARENT_ID="7">
+      <VOLUME>400</VOLUME>
+      <LOCATION>2</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="77" PARENT="Reporting" PARENT_ID="7">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Initial_Fill_Cartridge" INDEX="78" PARENT="Reporting" PARENT_ID="8">
+      <VOLUME>50</VOLUME>
+      <LOCATION>1</LOCATION>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Acquire_Background_Reference_Image" INDEX="79" PARENT="Reporting" PARENT_ID="8">
+      <REPEAT>1</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Empty_Cartridge/Set_Reporter" INDEX="80" PARENT="Reporting" PARENT_ID="8">
+      <VOLUME>50</VOLUME>
+      <LOCATION>7</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="81" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>58</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="82" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="82" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>55</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="83" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="83" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>52</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="84" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="84" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>49</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="85" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="85" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>46</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="86" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="86" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>44</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="87" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="87" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>42</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="88" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="88" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>40</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait/Wash_Cartridge_With_Reagent" INDEX="96" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>30</DURATION>
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="97" PARENT="Reporting" PARENT_ID="8">
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="98" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Image_Array" INDEX="99" PARENT="Reporting" PARENT_ID="8">
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="100" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>56</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="101" PARENT="Reporting" PARENT_ID="8">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="102" PARENT="Reporting" PARENT_ID="8">
+      <VOLUME>400</VOLUME>
+      <LOCATION>2</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="103" PARENT="Reporting" PARENT_ID="8">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Initial_Fill_Cartridge" INDEX="104" PARENT="Reporting" PARENT_ID="9">
+      <VOLUME>50</VOLUME>
+      <LOCATION>1</LOCATION>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Acquire_Background_Reference_Image" INDEX="105" PARENT="Reporting" PARENT_ID="9">
+      <REPEAT>1</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>0</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Empty_Cartridge/Set_Reporter" INDEX="106" PARENT="Reporting" PARENT_ID="9">
+      <VOLUME>50</VOLUME>
+      <LOCATION>8</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="107" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>58</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="108" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="108" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>55</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="109" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="109" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>52</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="110" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="110" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>49</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="111" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="111" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>47</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="112" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>40</DURATION>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="112" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>45</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait/Wash_Cartridge_With_Reagent" INDEX="118" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>30</DURATION>
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="119" PARENT="Reporting" PARENT_ID="9">
+      <VOLUME>400</VOLUME>
+      <LOCATION>1</LOCATION>
+      <REPEAT>2</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="120" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Image_Array" INDEX="121" PARENT="Reporting" PARENT_ID="9">
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>1</FILTER>
+        <LED>3</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>1</INTEGRATION_TIME>
+        <BGND>I1</BGND>
+      </IMAGE>
+      <IMAGE>
+        <FILTER>2</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>1</IPL>
+        <VBINNING>1</VBINNING>
+        <HBINNING>1</HBINNING>
+        <INTEGRATION_TIME>25000</INTEGRATION_TIME>
+        <BGND>I2</BGND>
+      </IMAGE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="122" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>56</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Wait" INDEX="123" PARENT="Reporting" PARENT_ID="9">
+      <DURATION>60</DURATION>
+    </STAGE>
+    <STAGE NAME="Wash_Cartridge_With_Reagent" INDEX="124" PARENT="Reporting" PARENT_ID="9">
+      <VOLUME>400</VOLUME>
+      <LOCATION>2</LOCATION>
+      <REPEAT>1</REPEAT>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Set_Temperature" INDEX="125" PARENT="Reporting" PARENT_ID="9">
+      <OBJECT>CARTRIDGE</OBJECT>
+      <TEMPERATURE>27</TEMPERATURE>
+    </STAGE>
+    <STAGE NAME="Deliver_TPB" INDEX="126" PARENT="Deliver_TPB" PARENT_ID="10">
+      <LOCATION>3</LOCATION>
+      <VOLUME>400</VOLUME>
+      <FILL_FROM_CUP_VOL>40</FILL_FROM_CUP_VOL>
+      <ASPIRATE_RATE>25</ASPIRATE_RATE>
+      <DISPENSE_RATE>250</DISPENSE_RATE>
+    </STAGE>
+    <STAGE NAME="Reverse_Bias" INDEX="127" PARENT="Reverse_Bias" PARENT_ID="11">
+      <REPEAT>2</REPEAT>
+      <IMAGE>
+        <FILTER>3</FILTER>
+        <LED>6</LED>
+        <ILLUMINATION>255</ILLUMINATION>
+        <IPL>2</IPL>
+        <VBINNING>2</VBINNING>
+        <HBINNING>2</HBINNING>
+        <INTEGRATION_TIME>1250</INTEGRATION_TIME>
+        <BGND>
+        </BGND>
+      </IMAGE>
+      <ACTIVATION>
+        <AMPLITUDE>-995</AMPLITUDE>
+        <DURATION>60</DURATION>
+        <PADS>0</PADS>
+        <POLLING>3</POLLING>
+      </ACTIVATION>
+    </STAGE>
+    <STAGE NAME="Rinse_Cartridge" INDEX="128" PARENT="Reverse_Bias" PARENT_ID="11" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="129" PARENT="Reverse_Bias" PARENT_ID="11" />
+    <STAGE NAME="Rinse_Cartridge" INDEX="130" PARENT="Reverse_Bias" PARENT_ID="11" />
+    <STAGE NAME="Finish_Fill/Wash_Tip" INDEX="131" PARENT="Reverse_Bias" PARENT_ID="11">
+      <REPEAT>2</REPEAT>
+    </STAGE>
+  </PROCESS>
+</TEMPLATE>

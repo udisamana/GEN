@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LOADING_PATTERN>
+  <CAPTURES>
+    <CAPTURE ID="1" ORDER="1" WELL="1">
+      <Pad Pad_Id="1"/>
+      <Pad Pad_Id="2"/>
+      <Pad Pad_Id="3"/>
+      <Pad Pad_Id="4"/>
+      <Pad Pad_Id="5"/>
+      <Pad Pad_Id="6"/>
+      <Pad Pad_Id="7"/>
+      <Pad Pad_Id="8"/>
+      <Pad Pad_Id="9"/>
+      <Pad Pad_Id="10"/>
+      <Pad Pad_Id="11"/>
+      <Pad Pad_Id="12"/>
+      <Pad Pad_Id="13"/>
+      <Pad Pad_Id="14"/>
+      <Pad Pad_Id="15"/>
+      <Pad Pad_Id="16"/>
+      <Pad Pad_Id="49"/>
+      <Pad Pad_Id="50"/>
+      <Pad Pad_Id="51"/>
+      <Pad Pad_Id="52"/>
+      <Pad Pad_Id="53"/>
+      <Pad Pad_Id="54"/>
+      <Pad Pad_Id="55"/>
+      <Pad Pad_Id="56"/>
+      <Pad Pad_Id="57"/>
+      <Pad Pad_Id="58"/>
+      <Pad Pad_Id="59"/>
+      <Pad Pad_Id="60"/>
+      <Pad Pad_Id="61"/>
+      <Pad Pad_Id="62"/>
+      <Pad Pad_Id="63"/>
+      <Pad Pad_Id="64"/>
+      <Pad Pad_Id="97"/>
+      <Pad Pad_Id="98"/>
+      <Pad Pad_Id="99"/>
+      <Pad Pad_Id="100"/>
+      <Pad Pad_Id="101"/>
+      <Pad Pad_Id="102"/>
+      <Pad Pad_Id="103"/>
+      <Pad Pad_Id="104"/>
+      <Pad Pad_Id="105"/>
+      <Pad Pad_Id="106"/>
+      <Pad Pad_Id="107"/>
+      <Pad Pad_Id="108"/>
+      <Pad Pad_Id="109"/>
+      <Pad Pad_Id="110"/>
+      <Pad Pad_Id="111"/>
+      <Pad Pad_Id="112"/>
+      <Pad Pad_Id="145"/>
+      <Pad Pad_Id="146"/>
+      <Pad Pad_Id="147"/>
+      <Pad Pad_Id="148"/>
+      <Pad Pad_Id="149"/>
+      <Pad Pad_Id="150"/>
+      <Pad Pad_Id="151"/>
+      <Pad Pad_Id="152"/>
+      <Pad Pad_Id="153"/>
+      <Pad Pad_Id="154"/>
+      <Pad Pad_Id="155"/>
+      <Pad Pad_Id="156"/>
+      <Pad Pad_Id="157"/>
+      <Pad Pad_Id="158"/>
+      <Pad Pad_Id="159"/>
+      <Pad Pad_Id="160"/>
+      <Pad Pad_Id="193"/>
+      <Pad Pad_Id="198"/>
+      <Pad Pad_Id="203"/>
+      <Pad Pad_Id="209"/>
+      <Pad Pad_Id="210"/>
+      <Pad Pad_Id="211"/>
+      <Pad Pad_Id="212"/>
+      <Pad Pad_Id="213"/>
+      <Pad Pad_Id="214"/>
+      <Pad Pad_Id="215"/>
+      <Pad Pad_Id="216"/>
+      <Pad Pad_Id="217"/>
+      <Pad Pad_Id="218"/>
+      <Pad Pad_Id="219"/>
+      <Pad Pad_Id="220"/>
+      <Pad Pad_Id="221"/>
+      <Pad Pad_Id="222"/>
+      <Pad Pad_Id="223"/>
+      <Pad Pad_Id="224"/>
+      <Pad Pad_Id="257"/>
+      <Pad Pad_Id="258"/>
+      <Pad Pad_Id="259"/>
+      <Pad Pad_Id="260"/>
+      <Pad Pad_Id="261"/>
+      <Pad Pad_Id="262"/>
+      <Pad Pad_Id="263"/>
+      <Pad Pad_Id="264"/>
+      <Pad Pad_Id="265"/>
+      <Pad Pad_Id="266"/>
+      <Pad Pad_Id="267"/>
+      <Pad Pad_Id="268"/>
+      <Pad Pad_Id="269"/>
+      <Pad Pad_Id="270"/>
+      <Pad Pad_Id="271"/>
+      <Pad Pad_Id="272"/>
+      <Pad Pad_Id="305"/>
+      <Pad Pad_Id="306"/>
+      <Pad Pad_Id="307"/>
+      <Pad Pad_Id="308"/>
+      <Pad Pad_Id="309"/>
+      <Pad Pad_Id="310"/>
+      <Pad Pad_Id="311"/>
+      <Pad Pad_Id="312"/>
+      <Pad Pad_Id="313"/>
+      <Pad Pad_Id="314"/>
+      <Pad Pad_Id="315"/>
+      <Pad Pad_Id="316"/>
+      <Pad Pad_Id="317"/>
+      <Pad Pad_Id="318"/>
+      <Pad Pad_Id="319"/>
+      <Pad Pad_Id="320"/>
+      <Pad Pad_Id="353"/>
+      <Pad Pad_Id="354"/>
+      <Pad Pad_Id="355"/>
+      <Pad Pad_Id="356"/>
+      <Pad Pad_Id="357"/>
+      <Pad Pad_Id="358"/>
+      <Pad Pad_Id="359"/>
+      <Pad Pad_Id="360"/>
+      <Pad Pad_Id="361"/>
+      <Pad Pad_Id="362"/>
+      <Pad Pad_Id="363"/>
+      <Pad Pad_Id="364"/>
+      <Pad Pad_Id="365"/>
+      <Pad Pad_Id="366"/>
+      <Pad Pad_Id="367"/>
+      <Pad Pad_Id="368"/>
+    </CAPTURE>
+    <CAPTURE ID="2" ORDER="2" WELL="2">
+      <Pad Pad_Id="17"/>
+      <Pad Pad_Id="18"/>
+      <Pad Pad_Id="19"/>
+      <Pad Pad_Id="20"/>
+      <Pad Pad_Id="21"/>
+      <Pad Pad_Id="22"/>
+      <Pad Pad_Id="23"/>
+      <Pad Pad_Id="24"/>
+      <Pad Pad_Id="25"/>
+      <Pad Pad_Id="26"/>
+      <Pad Pad_Id="27"/>
+      <Pad Pad_Id="28"/>
+      <Pad Pad_Id="29"/>
+      <Pad Pad_Id="30"/>
+      <Pad Pad_Id="31"/>
+      <Pad Pad_Id="32"/>
+      <Pad Pad_Id="65"/>
+      <Pad Pad_Id="66"/>
+      <Pad Pad_Id="67"/>
+      <Pad Pad_Id="68"/>
+      <Pad Pad_Id="69"/>
+      <Pad Pad_Id="70"/>
+      <Pad Pad_Id="71"/>
+      <Pad Pad_Id="72"/>
+      <Pad Pad_Id="73"/>
+      <Pad Pad_Id="74"/>
+      <Pad Pad_Id="75"/>
+      <Pad Pad_Id="76"/>
+      <Pad Pad_Id="77"/>
+      <Pad Pad_Id="78"/>
+      <Pad Pad_Id="79"/>
+      <Pad Pad_Id="80"/>
+      <Pad Pad_Id="113"/>
+      <Pad Pad_Id="114"/>
+      <Pad Pad_Id="115"/>
+      <Pad Pad_Id="116"/>
+      <Pad Pad_Id="117"/>
+      <Pad Pad_Id="118"/>
+      <Pad Pad_Id="119"/>
+      <Pad Pad_Id="120"/>
+      <Pad Pad_Id="121"/>
+      <Pad Pad_Id="122"/>
+      <Pad Pad_Id="123"/>
+      <Pad Pad_Id="124"/>
+      <Pad Pad_Id="125"/>
+      <Pad Pad_Id="126"/>
+      <Pad Pad_Id="127"/>
+      <Pad Pad_Id="128"/>
+      <Pad Pad_Id="161"/>
+      <Pad Pad_Id="162"/>
+      <Pad Pad_Id="163"/>
+      <Pad Pad_Id="164"/>
+      <Pad Pad_Id="165"/>
+      <Pad Pad_Id="166"/>
+      <Pad Pad_Id="167"/>
+      <Pad Pad_Id="168"/>
+      <Pad Pad_Id="169"/>
+      <Pad Pad_Id="170"/>
+      <Pad Pad_Id="171"/>
+      <Pad Pad_Id="172"/>
+      <Pad Pad_Id="173"/>
+      <Pad Pad_Id="174"/>
+      <Pad Pad_Id="175"/>
+      <Pad Pad_Id="176"/>
+      <Pad Pad_Id="194"/>
+      <Pad Pad_Id="199"/>
+      <Pad Pad_Id="204"/>
+      <Pad Pad_Id="225"/>
+      <Pad Pad_Id="226"/>
+      <Pad Pad_Id="227"/>
+      <Pad Pad_Id="228"/>
+      <Pad Pad_Id="229"/>
+      <Pad Pad_Id="230"/>
+      <Pad Pad_Id="231"/>
+      <Pad Pad_Id="232"/>
+      <Pad Pad_Id="233"/>
+      <Pad Pad_Id="234"/>
+      <Pad Pad_Id="235"/>
+      <Pad Pad_Id="236"/>
+      <Pad Pad_Id="237"/>
+      <Pad Pad_Id="238"/>
+      <Pad Pad_Id="239"/>
+      <Pad Pad_Id="240"/>
+      <Pad Pad_Id="273"/>
+      <Pad Pad_Id="274"/>
+      <Pad Pad_Id="275"/>
+      <Pad Pad_Id="276"/>
+      <Pad Pad_Id="277"/>
+      <Pad Pad_Id="278"/>
+      <Pad Pad_Id="279"/>
+      <Pad Pad_Id="280"/>
+      <Pad Pad_Id="281"/>
+      <Pad Pad_Id="282"/>
+      <Pad Pad_Id="283"/>
+      <Pad Pad_Id="284"/>
+      <Pad Pad_Id="285"/>
+      <Pad Pad_Id="286"/>
+      <Pad Pad_Id="287"/>
+      <Pad Pad_Id="288"/>
+      <Pad Pad_Id="321"/>
+      <Pad Pad_Id="322"/>
+      <Pad Pad_Id="323"/>
+      <Pad Pad_Id="324"/>
+      <Pad Pad_Id="325"/>
+      <Pad Pad_Id="326"/>
+      <Pad Pad_Id="327"/>
+      <Pad Pad_Id="328"/>
+      <Pad Pad_Id="329"/>
+      <Pad Pad_Id="330"/>
+      <Pad Pad_Id="331"/>
+      <Pad Pad_Id="332"/>
+      <Pad Pad_Id="333"/>
+      <Pad Pad_Id="334"/>
+      <Pad Pad_Id="335"/>
+      <Pad Pad_Id="336"/>
+      <Pad Pad_Id="369"/>
+      <Pad Pad_Id="370"/>
+      <Pad Pad_Id="371"/>
+      <Pad Pad_Id="372"/>
+      <Pad Pad_Id="373"/>
+      <Pad Pad_Id="374"/>
+      <Pad Pad_Id="375"/>
+      <Pad Pad_Id="376"/>
+      <Pad Pad_Id="377"/>
+      <Pad Pad_Id="378"/>
+      <Pad Pad_Id="379"/>
+      <Pad Pad_Id="380"/>
+      <Pad Pad_Id="381"/>
+      <Pad Pad_Id="382"/>
+      <Pad Pad_Id="383"/>
+      <Pad Pad_Id="384"/>
+    </CAPTURE>
+    <CAPTURE ID="3" ORDER="3" WELL="3">
+      <Pad Pad_Id="33"/>
+      <Pad Pad_Id="34"/>
+      <Pad Pad_Id="35"/>
+      <Pad Pad_Id="36"/>
+      <Pad Pad_Id="37"/>
+      <Pad Pad_Id="38"/>
+      <Pad Pad_Id="39"/>
+      <Pad Pad_Id="40"/>
+      <Pad Pad_Id="41"/>
+      <Pad Pad_Id="42"/>
+      <Pad Pad_Id="43"/>
+      <Pad Pad_Id="44"/>
+      <Pad Pad_Id="45"/>
+      <Pad Pad_Id="46"/>
+      <Pad Pad_Id="47"/>
+      <Pad Pad_Id="48"/>
+      <Pad Pad_Id="81"/>
+      <Pad Pad_Id="82"/>
+      <Pad Pad_Id="83"/>
+      <Pad Pad_Id="84"/>
+      <Pad Pad_Id="85"/>
+      <Pad Pad_Id="86"/>
+      <Pad Pad_Id="87"/>
+      <Pad Pad_Id="88"/>
+      <Pad Pad_Id="89"/>
+      <Pad Pad_Id="90"/>
+      <Pad Pad_Id="91"/>
+      <Pad Pad_Id="92"/>
+      <Pad Pad_Id="93"/>
+      <Pad Pad_Id="94"/>
+      <Pad Pad_Id="95"/>
+      <Pad Pad_Id="96"/>
+      <Pad Pad_Id="129"/>
+      <Pad Pad_Id="130"/>
+      <Pad Pad_Id="131"/>
+      <Pad Pad_Id="132"/>
+      <Pad Pad_Id="133"/>
+      <Pad Pad_Id="134"/>
+      <Pad Pad_Id="135"/>
+      <Pad Pad_Id="136"/>
+      <Pad Pad_Id="137"/>
+      <Pad Pad_Id="138"/>
+      <Pad Pad_Id="139"/>
+      <Pad Pad_Id="140"/>
+      <Pad Pad_Id="141"/>
+      <Pad Pad_Id="142"/>
+      <Pad Pad_Id="143"/>
+      <Pad Pad_Id="144"/>
+      <Pad Pad_Id="177"/>
+      <Pad Pad_Id="178"/>
+      <Pad Pad_Id="179"/>
+      <Pad Pad_Id="180"/>
+      <Pad Pad_Id="181"/>
+      <Pad Pad_Id="182"/>
+      <Pad Pad_Id="183"/>
+      <Pad Pad_Id="184"/>
+      <Pad Pad_Id="185"/>
+      <Pad Pad_Id="186"/>
+      <Pad Pad_Id="187"/>
+      <Pad Pad_Id="188"/>
+      <Pad Pad_Id="189"/>
+      <Pad Pad_Id="190"/>
+      <Pad Pad_Id="191"/>
+      <Pad Pad_Id="192"/>
+      <Pad Pad_Id="195"/>
+      <Pad Pad_Id="200"/>
+      <Pad Pad_Id="205"/>
+      <Pad Pad_Id="241"/>
+      <Pad Pad_Id="242"/>
+      <Pad Pad_Id="243"/>
+      <Pad Pad_Id="244"/>
+      <Pad Pad_Id="245"/>
+      <Pad Pad_Id="246"/>
+      <Pad Pad_Id="247"/>
+      <Pad Pad_Id="248"/>
+      <Pad Pad_Id="249"/>
+      <Pad Pad_Id="250"/>
+      <Pad Pad_Id="251"/>
+      <Pad Pad_Id="252"/>
+      <Pad Pad_Id="253"/>
+      <Pad Pad_Id="254"/>
+      <Pad Pad_Id="255"/>
+      <Pad Pad_Id="256"/>
+      <Pad Pad_Id="289"/>
+      <Pad Pad_Id="290"/>
+      <Pad Pad_Id="291"/>
+      <Pad Pad_Id="292"/>
+      <Pad Pad_Id="293"/>
+      <Pad Pad_Id="294"/>
+      <Pad Pad_Id="295"/>
+      <Pad Pad_Id="296"/>
+      <Pad Pad_Id="297"/>
+      <Pad Pad_Id="298"/>
+      <Pad Pad_Id="299"/>
+      <Pad Pad_Id="300"/>
+      <Pad Pad_Id="301"/>
+      <Pad Pad_Id="302"/>
+      <Pad Pad_Id="303"/>
+      <Pad Pad_Id="304"/>
+      <Pad Pad_Id="337"/>
+      <Pad Pad_Id="338"/>
+      <Pad Pad_Id="339"/>
+      <Pad Pad_Id="340"/>
+      <Pad Pad_Id="341"/>
+      <Pad Pad_Id="342"/>
+      <Pad Pad_Id="343"/>
+      <Pad Pad_Id="344"/>
+      <Pad Pad_Id="345"/>
+      <Pad Pad_Id="346"/>
+      <Pad Pad_Id="347"/>
+      <Pad Pad_Id="348"/>
+      <Pad Pad_Id="349"/>
+      <Pad Pad_Id="350"/>
+      <Pad Pad_Id="351"/>
+      <Pad Pad_Id="352"/>
+      <Pad Pad_Id="385"/>
+      <Pad Pad_Id="386"/>
+      <Pad Pad_Id="387"/>
+      <Pad Pad_Id="388"/>
+      <Pad Pad_Id="389"/>
+      <Pad Pad_Id="390"/>
+      <Pad Pad_Id="391"/>
+      <Pad Pad_Id="392"/>
+      <Pad Pad_Id="393"/>
+      <Pad Pad_Id="394"/>
+      <Pad Pad_Id="395"/>
+      <Pad Pad_Id="396"/>
+      <Pad Pad_Id="397"/>
+      <Pad Pad_Id="398"/>
+      <Pad Pad_Id="399"/>
+      <Pad Pad_Id="400"/>
+    </CAPTURE>
+  </CAPTURES>
+  <REFERENCES>
+    <REFERENCE ID="1" ORDER="1" WELL="11">
+      <Pad Pad_Id="196" />
+    </REFERENCE>
+    <REFERENCE ID="2" ORDER="2" WELL="12">
+      <Pad Pad_Id="201" />
+    </REFERENCE>
+    <REFERENCE ID="3" ORDER="3" WELL="13">
+      <Pad Pad_Id="206" />
+    </REFERENCE>
+    <REFERENCE ID="1" ORDER="7" WELL="11">
+      <Pad Pad_Id="197" />
+    </REFERENCE>
+    <REFERENCE ID="2" ORDER="8" WELL="12">
+      <Pad Pad_Id="202" />
+    </REFERENCE>
+    <REFERENCE ID="3" ORDER="9" WELL="13">
+      <Pad Pad_Id="207" />
+    </REFERENCE>
+  </REFERENCES>
+  <SAMPLES>
+    <SAMPLE ID="1">
+      <Pad Pad_Id="1"/>
+      <Pad Pad_Id="17"/>
+      <Pad Pad_Id="33"/>
+    </SAMPLE>
+    <SAMPLE ID="2">
+      <Pad Pad_Id="209"/>
+      <Pad Pad_Id="225"/>
+      <Pad Pad_Id="241"/>
+    </SAMPLE>
+    <SAMPLE ID="3">
+      <Pad Pad_Id="9"/>
+      <Pad Pad_Id="25"/>
+      <Pad Pad_Id="41"/>
+    </SAMPLE>
+    <SAMPLE ID="4">
+      <Pad Pad_Id="217"/>
+      <Pad Pad_Id="233"/>
+      <Pad Pad_Id="249"/>
+    </SAMPLE>
+    <SAMPLE ID="5">
+      <Pad Pad_Id="97"/>
+      <Pad Pad_Id="113"/>
+      <Pad Pad_Id="129"/>
+    </SAMPLE>
+    <SAMPLE ID="6">
+      <Pad Pad_Id="305"/>
+      <Pad Pad_Id="321"/>
+      <Pad Pad_Id="337"/>
+    </SAMPLE>
+    <SAMPLE ID="7">
+      <Pad Pad_Id="105"/>
+      <Pad Pad_Id="121"/>
+      <Pad Pad_Id="137"/>
+    </SAMPLE>
+    <SAMPLE ID="8">
+      <Pad Pad_Id="313"/>
+      <Pad Pad_Id="329"/>
+      <Pad Pad_Id="345"/>
+    </SAMPLE>
+    <SAMPLE ID="9">
+      <Pad Pad_Id="5"/>
+      <Pad Pad_Id="21"/>
+      <Pad Pad_Id="37"/>
+    </SAMPLE>
+    <SAMPLE ID="10">
+      <Pad Pad_Id="213"/>
+      <Pad Pad_Id="229"/>
+      <Pad Pad_Id="245"/>
+    </SAMPLE>
+    <SAMPLE ID="11">
+      <Pad Pad_Id="13"/>
+      <Pad Pad_Id="29"/>
+      <Pad Pad_Id="45"/>
+    </SAMPLE>
+    <SAMPLE ID="12">
+      <Pad Pad_Id="221"/>
+      <Pad Pad_Id="237"/>
+      <Pad Pad_Id="253"/>
+    </SAMPLE>
+    <SAMPLE ID="13">
+      <Pad Pad_Id="101"/>
+      <Pad Pad_Id="117"/>
+      <Pad Pad_Id="133"/>
+    </SAMPLE>
+    <SAMPLE ID="14">
+      <Pad Pad_Id="309"/>
+      <Pad Pad_Id="325"/>
+      <Pad Pad_Id="341"/>
+    </SAMPLE>
+    <SAMPLE ID="15">
+      <Pad Pad_Id="109"/>
+      <Pad Pad_Id="125"/>
+      <Pad Pad_Id="141"/>
+    </SAMPLE>
+    <SAMPLE ID="16">
+      <Pad Pad_Id="317"/>
+      <Pad Pad_Id="333"/>
+      <Pad Pad_Id="349"/>
+    </SAMPLE>
+    <SAMPLE ID="17">
+      <Pad Pad_Id="3"/>
+      <Pad Pad_Id="19"/>
+      <Pad Pad_Id="35"/>
+    </SAMPLE>
+    <SAMPLE ID="18">
+      <Pad Pad_Id="211"/>
+      <Pad Pad_Id="227"/>
+      <Pad Pad_Id="243"/>
+    </SAMPLE>
+    <SAMPLE ID="19">
+      <Pad Pad_Id="11"/>
+      <Pad Pad_Id="27"/>
+      <Pad Pad_Id="43"/>
+    </SAMPLE>
+    <SAMPLE ID="20">
+      <Pad Pad_Id="219"/>
+      <Pad Pad_Id="235"/>
+      <Pad Pad_Id="251"/>
+    </SAMPLE>
+    <SAMPLE ID="21">
+      <Pad Pad_Id="99"/>
+      <Pad Pad_Id="115"/>
+      <Pad Pad_Id="131"/>
+    </SAMPLE>
+    <SAMPLE ID="22">
+      <Pad Pad_Id="307"/>
+      <Pad Pad_Id="323"/>
+      <Pad Pad_Id="339"/>
+    </SAMPLE>
+    <SAMPLE ID="23">
+      <Pad Pad_Id="107"/>
+      <Pad Pad_Id="123"/>
+      <Pad Pad_Id="139"/>
+    </SAMPLE>
+    <SAMPLE ID="24">
+      <Pad Pad_Id="315"/>
+      <Pad Pad_Id="331"/>
+      <Pad Pad_Id="347"/>
+    </SAMPLE>
+    <SAMPLE ID="25">
+      <Pad Pad_Id="7"/>
+      <Pad Pad_Id="23"/>
+      <Pad Pad_Id="39"/>
+    </SAMPLE>
+    <SAMPLE ID="26">
+      <Pad Pad_Id="215"/>
+      <Pad Pad_Id="231"/>
+      <Pad Pad_Id="247"/>
+    </SAMPLE>
+    <SAMPLE ID="27">
+      <Pad Pad_Id="15"/>
+      <Pad Pad_Id="31"/>
+      <Pad Pad_Id="47"/>
+    </SAMPLE>
+    <SAMPLE ID="28">
+      <Pad Pad_Id="223"/>
+      <Pad Pad_Id="239"/>
+      <Pad Pad_Id="255"/>
+    </SAMPLE>
+    <SAMPLE ID="29">
+      <Pad Pad_Id="103"/>
+      <Pad Pad_Id="119"/>
+      <Pad Pad_Id="135"/>
+    </SAMPLE>
+    <SAMPLE ID="30">
+      <Pad Pad_Id="311"/>
+      <Pad Pad_Id="327"/>
+      <Pad Pad_Id="343"/>
+    </SAMPLE>
+    <SAMPLE ID="31">
+      <Pad Pad_Id="111"/>
+      <Pad Pad_Id="127"/>
+      <Pad Pad_Id="143"/>
+    </SAMPLE>
+    <SAMPLE ID="32">
+      <Pad Pad_Id="319"/>
+      <Pad Pad_Id="335"/>
+      <Pad Pad_Id="351"/>
+    </SAMPLE>
+    <SAMPLE ID="33">
+      <Pad Pad_Id="49"/>
+      <Pad Pad_Id="65"/>
+      <Pad Pad_Id="81"/>
+    </SAMPLE>
+    <SAMPLE ID="34">
+      <Pad Pad_Id="257"/>
+      <Pad Pad_Id="273"/>
+      <Pad Pad_Id="289"/>
+    </SAMPLE>
+    <SAMPLE ID="35">
+      <Pad Pad_Id="57"/>
+      <Pad Pad_Id="73"/>
+      <Pad Pad_Id="89"/>
+    </SAMPLE>
+    <SAMPLE ID="36">
+      <Pad Pad_Id="265"/>
+      <Pad Pad_Id="281"/>
+      <Pad Pad_Id="297"/>
+    </SAMPLE>
+    <SAMPLE ID="37">
+      <Pad Pad_Id="145"/>
+      <Pad Pad_Id="161"/>
+      <Pad Pad_Id="177"/>
+    </SAMPLE>
+    <SAMPLE ID="38">
+      <Pad Pad_Id="353"/>
+      <Pad Pad_Id="369"/>
+      <Pad Pad_Id="385"/>
+    </SAMPLE>
+    <SAMPLE ID="39">
+      <Pad Pad_Id="153"/>
+      <Pad Pad_Id="169"/>
+      <Pad Pad_Id="185"/>
+    </SAMPLE>
+    <SAMPLE ID="40">
+      <Pad Pad_Id="361"/>
+      <Pad Pad_Id="377"/>
+      <Pad Pad_Id="393"/>
+    </SAMPLE>
+    <SAMPLE ID="41">
+      <Pad Pad_Id="53"/>
+      <Pad Pad_Id="69"/>
+      <Pad Pad_Id="85"/>
+    </SAMPLE>
+    <SAMPLE ID="42">
+      <Pad Pad_Id="261"/>
+      <Pad Pad_Id="277"/>
+      <Pad Pad_Id="293"/>
+    </SAMPLE>
+    <SAMPLE ID="43">
+      <Pad Pad_Id="61"/>
+      <Pad Pad_Id="77"/>
+      <Pad Pad_Id="93"/>
+    </SAMPLE>
+    <SAMPLE ID="44">
+      <Pad Pad_Id="269"/>
+      <Pad Pad_Id="285"/>
+      <Pad Pad_Id="301"/>
+    </SAMPLE>
+    <SAMPLE ID="45">
+      <Pad Pad_Id="149"/>
+      <Pad Pad_Id="165"/>
+      <Pad Pad_Id="181"/>
+    </SAMPLE>
+    <SAMPLE ID="46">
+      <Pad Pad_Id="357"/>
+      <Pad Pad_Id="373"/>
+      <Pad Pad_Id="389"/>
+    </SAMPLE>
+    <SAMPLE ID="47">
+      <Pad Pad_Id="157"/>
+      <Pad Pad_Id="173"/>
+      <Pad Pad_Id="189"/>
+    </SAMPLE>
+    <SAMPLE ID="48">
+      <Pad Pad_Id="365"/>
+      <Pad Pad_Id="381"/>
+      <Pad Pad_Id="397"/>
+    </SAMPLE>
+    <SAMPLE ID="49">
+      <Pad Pad_Id="51"/>
+      <Pad Pad_Id="67"/>
+      <Pad Pad_Id="83"/>
+    </SAMPLE>
+    <SAMPLE ID="50">
+      <Pad Pad_Id="259"/>
+      <Pad Pad_Id="275"/>
+      <Pad Pad_Id="291"/>
+    </SAMPLE>
+    <SAMPLE ID="51">
+      <Pad Pad_Id="59"/>
+      <Pad Pad_Id="75"/>
+      <Pad Pad_Id="91"/>
+    </SAMPLE>
+    <SAMPLE ID="52">
+      <Pad Pad_Id="267"/>
+      <Pad Pad_Id="283"/>
+      <Pad Pad_Id="299"/>
+    </SAMPLE>
+    <SAMPLE ID="53">
+      <Pad Pad_Id="147"/>
+      <Pad Pad_Id="163"/>
+      <Pad Pad_Id="179"/>
+    </SAMPLE>
+    <SAMPLE ID="54">
+      <Pad Pad_Id="355"/>
+      <Pad Pad_Id="371"/>
+      <Pad Pad_Id="387"/>
+    </SAMPLE>
+    <SAMPLE ID="55">
+      <Pad Pad_Id="155"/>
+      <Pad Pad_Id="171"/>
+      <Pad Pad_Id="187"/>
+    </SAMPLE>
+    <SAMPLE ID="56">
+      <Pad Pad_Id="363"/>
+      <Pad Pad_Id="379"/>
+      <Pad Pad_Id="395"/>
+    </SAMPLE>
+    <SAMPLE ID="57">
+      <Pad Pad_Id="55"/>
+      <Pad Pad_Id="71"/>
+      <Pad Pad_Id="87"/>
+    </SAMPLE>
+    <SAMPLE ID="58">
+      <Pad Pad_Id="263"/>
+      <Pad Pad_Id="279"/>
+      <Pad Pad_Id="295"/>
+    </SAMPLE>
+    <SAMPLE ID="59">
+      <Pad Pad_Id="63"/>
+      <Pad Pad_Id="79"/>
+      <Pad Pad_Id="95"/>
+    </SAMPLE>
+    <SAMPLE ID="60">
+      <Pad Pad_Id="271"/>
+      <Pad Pad_Id="287"/>
+      <Pad Pad_Id="303"/>
+    </SAMPLE>
+    <SAMPLE ID="61">
+      <Pad Pad_Id="151"/>
+      <Pad Pad_Id="167"/>
+      <Pad Pad_Id="183"/>
+    </SAMPLE>
+    <SAMPLE ID="62">
+      <Pad Pad_Id="359"/>
+      <Pad Pad_Id="375"/>
+      <Pad Pad_Id="391"/>
+    </SAMPLE>
+    <SAMPLE ID="63">
+      <Pad Pad_Id="159"/>
+      <Pad Pad_Id="175"/>
+      <Pad Pad_Id="191"/>
+    </SAMPLE>
+    <SAMPLE ID="64">
+      <Pad Pad_Id="367"/>
+      <Pad Pad_Id="383"/>
+      <Pad Pad_Id="399"/>
+    </SAMPLE>
+    <SAMPLE ID="65">
+      <Pad Pad_Id="2"/>
+      <Pad Pad_Id="18"/>
+      <Pad Pad_Id="34"/>
+    </SAMPLE>
+    <SAMPLE ID="66">
+      <Pad Pad_Id="210"/>
+      <Pad Pad_Id="226"/>
+      <Pad Pad_Id="242"/>
+    </SAMPLE>
+    <SAMPLE ID="67">
+      <Pad Pad_Id="10"/>
+      <Pad Pad_Id="26"/>
+      <Pad Pad_Id="42"/>
+    </SAMPLE>
+    <SAMPLE ID="68">
+      <Pad Pad_Id="218"/>
+      <Pad Pad_Id="234"/>
+      <Pad Pad_Id="250"/>
+    </SAMPLE>
+    <SAMPLE ID="69">
+      <Pad Pad_Id="98"/>
+      <Pad Pad_Id="114"/>
+      <Pad Pad_Id="130"/>
+    </SAMPLE>
+    <SAMPLE ID="70">
+      <Pad Pad_Id="306"/>
+      <Pad Pad_Id="322"/>
+      <Pad Pad_Id="338"/>
+    </SAMPLE>
+    <SAMPLE ID="71">
+      <Pad Pad_Id="106"/>
+      <Pad Pad_Id="122"/>
+      <Pad Pad_Id="138"/>
+    </SAMPLE>
+    <SAMPLE ID="72">
+      <Pad Pad_Id="314"/>
+      <Pad Pad_Id="330"/>
+      <Pad Pad_Id="346"/>
+    </SAMPLE>
+    <SAMPLE ID="73">
+      <Pad Pad_Id="6"/>
+      <Pad Pad_Id="22"/>
+      <Pad Pad_Id="38"/>
+    </SAMPLE>
+    <SAMPLE ID="74">
+      <Pad Pad_Id="214"/>
+      <Pad Pad_Id="230"/>
+      <Pad Pad_Id="246"/>
+    </SAMPLE>
+    <SAMPLE ID="75">
+      <Pad Pad_Id="14"/>
+      <Pad Pad_Id="30"/>
+      <Pad Pad_Id="46"/>
+    </SAMPLE>
+    <SAMPLE ID="76">
+      <Pad Pad_Id="222"/>
+      <Pad Pad_Id="238"/>
+      <Pad Pad_Id="254"/>
+    </SAMPLE>
+    <SAMPLE ID="77">
+      <Pad Pad_Id="102"/>
+      <Pad Pad_Id="118"/>
+      <Pad Pad_Id="134"/>
+    </SAMPLE>
+    <SAMPLE ID="78">
+      <Pad Pad_Id="310"/>
+      <Pad Pad_Id="326"/>
+      <Pad Pad_Id="342"/>
+    </SAMPLE>
+    <SAMPLE ID="79">
+      <Pad Pad_Id="110"/>
+      <Pad Pad_Id="126"/>
+      <Pad Pad_Id="142"/>
+    </SAMPLE>
+    <SAMPLE ID="80">
+      <Pad Pad_Id="318"/>
+      <Pad Pad_Id="334"/>
+      <Pad Pad_Id="350"/>
+    </SAMPLE>
+    <SAMPLE ID="81">
+      <Pad Pad_Id="4"/>
+      <Pad Pad_Id="20"/>
+      <Pad Pad_Id="36"/>
+    </SAMPLE>
+    <SAMPLE ID="82">
+      <Pad Pad_Id="212"/>
+      <Pad Pad_Id="228"/>
+      <Pad Pad_Id="244"/>
+    </SAMPLE>
+    <SAMPLE ID="83">
+      <Pad Pad_Id="12"/>
+      <Pad Pad_Id="28"/>
+      <Pad Pad_Id="44"/>
+    </SAMPLE>
+    <SAMPLE ID="84">
+      <Pad Pad_Id="220"/>
+      <Pad Pad_Id="236"/>
+      <Pad Pad_Id="252"/>
+    </SAMPLE>
+    <SAMPLE ID="85">
+      <Pad Pad_Id="100"/>
+      <Pad Pad_Id="116"/>
+      <Pad Pad_Id="132"/>
+    </SAMPLE>
+    <SAMPLE ID="86">
+      <Pad Pad_Id="308"/>
+      <Pad Pad_Id="324"/>
+      <Pad Pad_Id="340"/>
+    </SAMPLE>
+    <SAMPLE ID="87">
+      <Pad Pad_Id="108"/>
+      <Pad Pad_Id="124"/>
+      <Pad Pad_Id="140"/>
+    </SAMPLE>
+    <SAMPLE ID="88">
+      <Pad Pad_Id="316"/>
+      <Pad Pad_Id="332"/>
+      <Pad Pad_Id="348"/>
+    </SAMPLE>
+    <SAMPLE ID="89">
+      <Pad Pad_Id="8"/>
+      <Pad Pad_Id="24"/>
+      <Pad Pad_Id="40"/>
+    </SAMPLE>
+    <SAMPLE ID="90">
+      <Pad Pad_Id="216"/>
+      <Pad Pad_Id="232"/>
+      <Pad Pad_Id="248"/>
+    </SAMPLE>
+    <SAMPLE ID="91">
+      <Pad Pad_Id="16"/>
+      <Pad Pad_Id="32"/>
+      <Pad Pad_Id="48"/>
+    </SAMPLE>
+    <SAMPLE ID="92">
+      <Pad Pad_Id="224"/>
+      <Pad Pad_Id="240"/>
+      <Pad Pad_Id="256"/>
+    </SAMPLE>
+    <SAMPLE ID="93">
+      <Pad Pad_Id="104"/>
+      <Pad Pad_Id="120"/>
+      <Pad Pad_Id="136"/>
+    </SAMPLE>
+    <SAMPLE ID="94">
+      <Pad Pad_Id="312"/>
+      <Pad Pad_Id="328"/>
+      <Pad Pad_Id="344"/>
+    </SAMPLE>
+    <SAMPLE ID="95">
+      <Pad Pad_Id="112"/>
+      <Pad Pad_Id="128"/>
+      <Pad Pad_Id="144"/>
+    </SAMPLE>
+    <SAMPLE ID="96">
+      <Pad Pad_Id="320"/>
+      <Pad Pad_Id="336"/>
+      <Pad Pad_Id="352"/>
+    </SAMPLE>
+
+  </SAMPLES>
+</LOADING_PATTERN>

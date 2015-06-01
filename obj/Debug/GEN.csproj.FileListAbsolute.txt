@@ -54,7 +54,7 @@ C:\Savion\inDrive\Kits\GEN\GEN\obj\Debug\GC2.dll
 C:\Savion\inDrive\Kits\GEN\GEN\obj\Debug\GC2.pdb
 C:\Drive\GEN\GEN\bin\Debug\GEN.cs
 C:\Drive\GEN\GEN\obj\Debug\GEN.csprojResolveAssemblyReference.cache
-C:\Drive\GEN\GEN\bin\Debug\CFN.dll
-C:\Drive\GEN\GEN\bin\Debug\CFN.pdb
-C:\Drive\GEN\GEN\obj\Debug\CFN.dll
-C:\Drive\GEN\GEN\obj\Debug\CFN.pdb
+C:\Drive\GEN\GEN\bin\Debug\ST6.dll
+C:\Drive\GEN\GEN\bin\Debug\ST6.pdb
+C:\Drive\GEN\GEN\obj\Debug\ST6.dll
+C:\Drive\GEN\GEN\obj\Debug\ST6.pdb
