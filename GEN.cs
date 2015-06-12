@@ -45,6 +45,15 @@ namespace ST6 // new kit
         public List<PatogenReferanceResult> patogenRefResults = new List<PatogenReferanceResult>();
         public List<MutRefResult> mutRfResults = new List<MutRefResult>();
 
+
+
+        public const string PBPB = "pbpb";
+        public const string ORF1 = "orf1";
+
+
+
+
+        public const string BGLOBIN = "B-Globin";
         public const string HIS1 = "HIS1";
         public const string HIS2 = "HIS2";
         public const string HIS3 = "HIS3";
@@ -1147,12 +1156,15 @@ namespace ST6 // new kit
         public override string[,] Analyze(double[, , ,] signals, out string[] GeneralColumnsNames, out string[] ReporterNames, out string[] ColumnsNamesOfEachReporter, out string[] CustomColumnsNames, string[] SampleNameList, int[] SamplePositionList, double[,] referenceSignalsData, double[,] backgroundSignals)
         {
 
+
             GeneralColumnsNames = new string[2];
             ReporterNames = new string[1] { "" };
             ColumnsNamesOfEachReporter = new string[1] { "" };
             CustomColumnsNames = new string[1] { "" };
             List<Target> targets = Target.ToModel(init());
             List<Signal> signalList = Signal.ToModel(signals);
+
+
 
             if (kitType == "Mutation")
             {
@@ -1173,6 +1185,7 @@ namespace ST6 // new kit
                 ReporterNames = Enumerable.Range(1, reporters).Select(x => "Reporter Mix " + x).ToArray();
 
                 ColumnsNamesOfEachReporter = new string[5] { "Target", "Color", "Value", "Control Value", "Inter" };
+                
                 List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
 
                 return (BL.ConvertAnalyzeResultToLegendAnalyzeArray(PatRess, SamplePositionList, CustomValues.GetControlTarget(acronym)));
@@ -1395,7 +1408,7 @@ namespace ST6 // new kit
         public override string[,] Details(double[, , ,] signals, out string[] DetailsColumnHeaders, string[] SampleNameList, int[] SamplePositionList, double[,] referenceSignalsData, double[,] backgroundSignals)
         {
             DetailsColumnHeaders = new string[1];
-
+            
             List<Target> targets = Target.ToModel(init());
             List<Signal> signalList = Signal.ToModel(signals);
             List<string> analyzeResultsHeaders = new List<string>();
@@ -1405,30 +1418,12 @@ namespace ST6 // new kit
             {
 
                 List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym);
-                //header
-                analyzeResultsHeaders.Add("Sample");
+                List<string> targetsNames = GetSortedTargets(PatRess, acronym);
+                DetailsColumnHeaders = GetTrgetsFullName(DetailsColumnHeaders, analyzeResultsHeaders, targetsNames);
 
-                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.bacteria).OrderBy(x => x.TargetName))
-                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
+                List<string> targetsforAnalyze = GetSortedTargets(PatRess, acronym);
+                return BL.ConvertAnalyzeResultToDetailsArrayPathogen(PatRess, targetsforAnalyze, acronym);
 
-                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.Parasite).OrderBy(x => x.TargetName))
-                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
-
-                foreach (var target in PatRess.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.undefined).OrderBy(x => x.TargetName))
-                    analyzeResultsHeaders.Add(CustomValues.GetTargetFullNameByTarget(target.TargetName));
-
-                analyzeResultsHeaders = analyzeResultsHeaders.OrderBy(x => name).Distinct().ToList();
-
-                DetailsColumnHeaders = analyzeResultsHeaders.ToArray();
-                //
-
-                analyzeResultsHeaders.Add("");
-                analyzeResultsHeaders.Add("");
-                analyzeResultsHeaders.Add("");
-                analyzeResultsHeaders.Add("");
-                analyzeResultsHeaders.Add("");
-                analyzeResultsHeaders.Add("");
-                return BL.ConvertAnalyzeResultToDetailsArrayPathogen(PatRess);
             }
             if (kitType == "Mutation")
             {
@@ -1445,6 +1440,7 @@ namespace ST6 // new kit
 
 
             }
+            
             string[,] s = new string[1, 1];
             return s;
 
@@ -1452,6 +1448,57 @@ namespace ST6 // new kit
 
               
              */
+        }
+        private string[] GetTrgetsFullName(string[] DetailsColumnHeaders, List<string> analyzeResultsHeaders, List<string> targetsNames)
+        {
+            List<string> targetsFullNames = targetsNames;
+            if (acronym == "ST6")
+            {
+                targetsFullNames.Remove(PBPB);
+                targetsFullNames.Remove(ORF1);
+            }
+            targetsFullNames = CustomValues.GetTargetFullNameByTarget(targetsNames);
+            analyzeResultsHeaders.Add("Sample");
+            analyzeResultsHeaders.AddRange(targetsFullNames);
+            analyzeResultsHeaders.Add("");
+            DetailsColumnHeaders = analyzeResultsHeaders.ToArray();
+            return DetailsColumnHeaders;
+        }
+        private static List<string> GetSortedTargets(List<PatRes> PatRess, string acronym = null)
+        {
+            List<string> targetsNames = PatRess.Select(x => x.TargetName).Distinct().ToList();
+
+
+            List<string> sortedBacteria = new List<string>();
+            foreach (var target in targetsNames)
+                if (CustomValues.GetTargetTypeByTarget(target) == TargetType.bacteria)
+                    sortedBacteria.Add(target);
+            sortedBacteria.OrderBy(x=>x).ToList();
+
+            List<string> sortedParasite = new List<string>();
+            foreach (var target in targetsNames)
+                if (CustomValues.GetTargetTypeByTarget(target) == TargetType.Parasite)
+                    sortedParasite.Add(target);
+            sortedParasite.OrderBy(x => x).ToList();
+
+            List<string> sortedUndefined = new List<string>();
+            foreach (var target in targetsNames)
+                if (CustomValues.GetTargetTypeByTarget(target) == TargetType.undefined)
+                    sortedUndefined.Add(target);
+            sortedUndefined.OrderBy(x => x).ToList();
+
+            List<string> sortedTargetNames = new List<string>();
+            sortedTargetNames.AddRange(sortedBacteria);
+            sortedTargetNames.AddRange(sortedParasite);
+            sortedTargetNames.AddRange(sortedUndefined);
+
+            if (acronym == "ST6")
+            {
+                sortedTargetNames.Remove(BGLOBIN);
+                sortedTargetNames.Insert(0, BGLOBIN);
+            }
+
+            return sortedTargetNames;
         }
         public override string[,] Summary(double[, , ,] signals, out string[] SummaryColumnHeaders, string[] SampleNameList, int[] SamplePositionList, double[,] referenceSignalsData, double[,] backgroundSignals)
         {
@@ -1534,7 +1581,6 @@ namespace ST6 // new kit
             }
             return sampleTargets;
         }
-
         private string checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(string sampleTargets, PatRes patRes)
         {
             sampleTargets += CustomValues.GetTargetFullNameByTarget(patRes.TargetName);

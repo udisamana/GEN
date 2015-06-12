@@ -803,9 +803,16 @@ new Target()
             }
         }
 
+        public static List<string> GetTargetFullNameByTarget(List<string> targets)
+        {
+            List<string> fullNameTargets = new List<string>();
+            foreach (var target in targets)
+                fullNameTargets.Add(GetTargetFullNameByTarget(target));
+            
+            return fullNameTargets;
+        }
         public static string GetTargetFullNameByTarget(string targetName) // new kit
         {
-
 
             switch (targetName)
             {

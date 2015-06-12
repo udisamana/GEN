@@ -76,13 +76,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XMLs\CFQ\ILL1000\CFQTemplate.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="ST6Template.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ST6_LOADINGPATTERN.xml">
+    <EmbeddedResource Include="ST6_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3Template.xml" />
+    <EmbeddedResource Include="XMLs\CFQ\ILL1000\CFQTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN.xml" />
@@ -101,8 +101,6 @@
     <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN-onePart.xml" />
     <EmbeddedResource Include="XMLs\STT\STTTemplate.xml" />
     <EmbeddedResource Include="XMLs\STT\STT_LOADINGPATTERN.xml" />
-    <EmbeddedResource Include="XMLs\ST3\ST3Template.xml" />
-    <EmbeddedResource Include="XMLs\ST3\ST3_LOADINGPATTERN.xml" />
     <Content Include="XMLs\GENERAL\2wells192samples.xml" />
     <Content Include="XMLs\GENERAL\2wells96samples.xml" />
     <EmbeddedResource Include="XMLs\GCQ\GCQTemplate.xml">
@@ -143,7 +141,6 @@
     <Content Include="Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XMLs\ST3\192Samples\" />
     <Folder Include="XMLs\ST6\" />
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,17 @@ namespace Template
 
         public const string POS = "Pos";
         public const string NEG = "-";
+        public const string GYRA = "gyrA";
+        public const string GAP = "gap";
+        public const string UREAE = "UreaE";
+        public const string HCT = "hct";
+        public const string PBPB = "pbpb";
+        public const string OPA = "opa";
+        public const string ORF1 = "orf1";
+        public const string _18S = "18S";
+        public const string BGLOBIN = "B-Globin";
+        public const string EXTRACTIONCONTROL = "EC";
+        
 
         //General
         public static List<MappedSignalTarget> Map(List<Signal> signals, List<Target> targets, bool isMutant = false)
@@ -531,6 +542,8 @@ namespace Template
             int anchorColumn = 0;
             int anchorRow = 0;
             List<List<PatRes>> lists = new List<List<PatRes>>();
+            models.Where(x => x.TargetName == BGLOBIN);
+            models.ForEach(x => x.TargetName = x.TargetName.Replace(BGLOBIN, EXTRACTIONCONTROL));
             int reporters = models.Select(x => x.Reporter).Distinct().Count();
 
             //Order the model
@@ -650,7 +663,7 @@ namespace Template
             return signals;
         }
 
-         
+
         //details
         public static string[,] ConvertAnalyzeResultToDetailsArrayMutation(List<MutRes> analyzeResults, string[] SampleNameList, int[] SamplePositionList)
         {
@@ -669,19 +682,33 @@ namespace Template
                     patogenIndex++;
                 }
             }
+
             return DetailsDataTable;
         }
-        public static string[,] ConvertAnalyzeResultToDetailsArrayPathogen(List<PatRes> analyzeResults)
+        public static string[,] ConvertAnalyzeResultToDetailsArrayPathogen(List<PatRes> analyzeResults, List<string> targetsNames = null, string acronim = null)
         {
-            int patogenCount = analyzeResults.Select(x => x.TargetName).Distinct().Count();
             int samplesCount = analyzeResults.Select(x => x.SampleIndex).Distinct().Count();
-            string[,] DetailsDataTable = new string[samplesCount, patogenCount + 1];
+            int patogenCount = analyzeResults.Select(x => x.TargetName).Distinct().Count();
+            string[,] DetailsDataTable = new string[samplesCount, patogenCount + 2];//SAMPLE + ""
+
+
+            var bacteriaRes = analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.bacteria);
+            bacteriaRes.OrderBy(x => x.TargetName);
+
+            var parasiteRes = analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.Parasite).OrderBy(x => x.TargetName);
+            parasiteRes.OrderBy(x => x.TargetName);
+
+            var undefinedRes = analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.undefined).OrderBy(x => x.TargetName);
+            undefinedRes.OrderBy(x => x.TargetName);
 
             List<PatRes> arrangedList = new List<PatRes>();
-            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.bacteria).OrderBy(x => x.TargetName));
-            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.Parasite).OrderBy(x => x.TargetName));
-            arrangedList.AddRange(analyzeResults.Where(x => CustomValues.GetTargetTypeByTarget(x.TargetName) == TargetType.undefined).OrderBy(x => x.TargetName));
+            arrangedList.AddRange(bacteriaRes);
+            arrangedList.AddRange(parasiteRes);
+            arrangedList.AddRange(undefinedRes);
 
+
+
+            //arrangedList.AddRange(analyzeResults.OrderBy(x => x.TargetName));
             for (int sample = 1; sample <= samplesCount; sample++)
             {
                 DetailsDataTable[sample - 1, 0] = sample.ToString();
@@ -690,12 +717,127 @@ namespace Template
                         DetailsDataTable[sample - 1, patogen] = "X";
                 else
                 {
+                    List<string> unifiedcolumn1 = new List<string>();
+                    List<string> unifiedcolumn2 = new List<string>();
                     int patogenIndex = 1;
-                    foreach (var patogen in arrangedList.Where(x => x.SampleIndex == sample))
+                    foreach (var target in targetsNames)
+                    {
+                        string inter;
+
+                        if (arrangedList.Where(x => x.SampleIndex == sample && x.TargetName == target).Count() != 1)
+                        {
+                            string errStr = "there supposed to be just one target per sample";
+                        }
+                        else
+                        {
+
+
+                            if (acronim == "ST6")
+                            {
+                                switch (target)
+                                {
+                                    case HCT:
+
+
+                                        inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                        unifiedcolumn1.Add(inter);
+                                        if (unifiedcolumn1.Count() == 2)
+                                        {
+                                            if (unifiedcolumn1.Any(x => x == POS))
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = POS;
+                                            }
+                                            else
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                            }
+                                            patogenIndex++;
+                                        }
+                                        break;
+
+
+                                    case PBPB:
+
+                                        inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                        unifiedcolumn1.Add(inter);
+                                        if (unifiedcolumn1.Count() == 2)
+                                        {
+                                            if (unifiedcolumn1.Any(x => x == POS))
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = POS;
+                                            }
+                                            else
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                            }
+                                            patogenIndex++;
+                                        }
+                                        break;
+
+                                    case OPA:
+                                        inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                        unifiedcolumn2.Add(inter);
+                                        if (unifiedcolumn2.Count() == 2)
+                                        {
+                                            if (unifiedcolumn2.Any(x => x == POS))
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = POS;
+                                            }
+                                            else
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                            }
+                                            patogenIndex++;
+
+                                        }
+                                        break;
+
+                                    case ORF1:
+                                        inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                        unifiedcolumn2.Add(inter);
+                                        if (unifiedcolumn2.Count() == 2)
+                                        {
+                                            if (unifiedcolumn2.Any(x => x == POS))
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = POS;
+                                            }
+                                            else
+                                            {
+                                                DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                            }
+                                            patogenIndex++;
+
+                                        }
+                                        break;
+
+
+                                    default:
+                                        inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                        DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                        patogenIndex++;
+                                        break;
+                                }
+
+
+
+                            }
+
+                            else
+                            {
+                                inter = arrangedList.FirstOrDefault(x => x.SampleIndex == sample && x.TargetName == target).Inter;
+                                DetailsDataTable[sample - 1, patogenIndex] = inter;
+                                patogenIndex++;
+                            }
+                        }
+
+                    }
+                    /*
+                    foreach (var patogen in arrangedList.Where(x => x.SampleIndex == sample).OrderBy(t=>t.TargetName))
                     {
                         DetailsDataTable[sample - 1, patogenIndex] = patogen.Inter;
                         patogenIndex++;
                     }
+                     * */
                 }
             }
 
@@ -780,13 +922,13 @@ namespace Template
         //Base
         public static string[,] ConvertDictionaryTo2dStringArray(Dictionary<string, string> Dictionary)
         {
-            string[,] stringArray2d = new string[Dictionary.Count,2];
+            string[,] stringArray2d = new string[Dictionary.Count, 2];
             int i = 0;
 
             foreach (KeyValuePair<string, string> item in Dictionary)
             {
-                stringArray2d[i,0] = item.Key;
-                stringArray2d[i,1] = item.Value;
+                stringArray2d[i, 0] = item.Key;
+                stringArray2d[i, 1] = item.Value;
                 i++;
             }
 
