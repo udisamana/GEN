@@ -50,12 +50,12 @@ namespace Template
 
             originalPatogens.Add(
             new Target()
-    {
-        Capture = 1,
-        Color = Colors.Green,
-        isControl = true,
-        Reporter = 2,
-    });
+            {
+                Capture = 1,
+                Color = Colors.Green,
+                isControl = true,
+                Reporter = 2,
+            });
             originalPatogens.Add(
 new Target()
 {
@@ -119,6 +119,86 @@ new Target()
 
             return originalPatogens;
         }
+        internal static List<Target> CustomizeST3(List<Target> originalPatogens)
+        {
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 1,
+});
+
+
+            originalPatogens.Add(
+            new Target()
+            {
+                Capture = 1,
+                Color = Colors.Green,
+                isControl = true,
+                Reporter = 2,
+            });
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 3,
+});
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Green,
+    isControl = true,
+    Reporter = 4,
+});
+
+            ///////////////////////////////
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Red,
+    isControl = false,
+    Name = _18S,
+    Reporter = 2
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Red,
+    isControl = true,
+    Reporter = 2,
+    ControlPatogenName = _18S
+});
+
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 2,
+    Color = Colors.Red,
+    isControl = false,
+    Name = BGLOBIN,
+    Reporter = 3
+});
+            originalPatogens.Add(
+new Target()
+{
+    Capture = 1,
+    Color = Colors.Red,
+    isControl = true,
+    Reporter = 3,
+    ControlPatogenName = BGLOBIN
+});
+
+            return originalPatogens;
+        }
+
         internal static List<Target> CustomizeGC2(List<Target> originalPatogens)
         {
             //when there is more then one control in the reporter
@@ -462,10 +542,10 @@ new Target()
 
             referenceColumnHeaders[4] = "MinBkg";
             referenceColumnHeaders[5] = "DivBkg";
-            referenceColumnHeaders[6] = "IsPass";
-            referenceColumnHeaders[7] = "IsMixPass";
+            referenceColumnHeaders[6] = "Pass/Fail";
+            referenceColumnHeaders[7] = "Mix Pass/Fail";
             referenceColumnHeaders[8] = "AvgBkg";
-            referenceColumnHeaders[9] = "ControlPatogen";
+            referenceColumnHeaders[9] = "ControlPathogen";
 
             //string[] referenceColumnHeaders = new string[new PatogenResult().GetType().GetProperties().Count()];
 
@@ -510,6 +590,19 @@ new Target()
             MinSigControls.Add(new MinSigControl() { TargetName = ORF1, Capture = 2, PadCont = 1, MinimunSignal = 5000, MinimumRatio = 5 });
             MinSigControls.Add(new MinSigControl() { TargetName = _18S, Capture = 2, PadCont = 3, MinimunSignal = 5000, MinimumRatio = 10 });
             MinSigControls.Add(new MinSigControl() { TargetName = BGLOBIN, Capture = 3, PadCont = 4, MinimunSignal = 6000, MinimumRatio = 7 });
+
+            return MinSigControls;
+        }
+        internal static List<MinSigControl> GetST3MinSigControl()
+        {
+            List<MinSigControl> MinSigControls = new List<MinSigControl>();
+
+            MinSigControls.Add(new MinSigControl() { TargetName = PBPB, Capture = 4, PadCont = 2, MinimunSignal = 5000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = HCT, Capture = 1, PadCont = 4, MinimunSignal = 5000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = _18S, Capture = 2, PadCont = 3, MinimunSignal = 7000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = ORF1, Capture = 2, PadCont = 1, MinimunSignal = 8000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = OPA, Capture = 4, PadCont = 1, MinimunSignal = 7000, MinimumRatio = 3 });
+            MinSigControls.Add(new MinSigControl() { TargetName = BGLOBIN, Capture = 3, PadCont = 4, MinimunSignal = 12000, MinimumRatio = 3 });
 
             return MinSigControls;
         }
@@ -764,7 +857,7 @@ new Target()
                 case ("GC2"):
                     return "NVC";
                 case ("ST6"):
-                    return BGLOBIN;
+                    return ExtractionControl;
                 case ("GCQ"):
                     return "NVC";
                 case ("GI2"):
@@ -917,5 +1010,6 @@ new Target()
             }
             return false;
         }
+
     }
 }

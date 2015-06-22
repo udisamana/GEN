@@ -20,8 +20,9 @@ namespace Template
         public const string ORF1 = "orf1";
         public const string _18S = "18S";
         public const string BGLOBIN = "B-Globin";
-        public const string EXTRACTIONCONTROL = "EC";
-        
+        public const string EXTRACTIONCONTROL = "Extraction Control";
+        public const string AMPLIFICATIONCONTROL = "Amplification Control";
+
 
         //General
         public static List<MappedSignalTarget> Map(List<Signal> signals, List<Target> targets, bool isMutant = false)
@@ -117,6 +118,11 @@ namespace Template
             {
                 targets = CustomValues.CustomizeST6(targets);//new kit
                 minSigControls = CustomValues.GetST6MinSigControl();//new kit
+            }
+            if (acronim == "ST3")//new kit
+            {
+                targets = CustomValues.CustomizeST3(targets);//new kit
+                minSigControls = CustomValues.GetST3MinSigControl();//new kit
             }
             if (acronim == "GC2" || acronim == "GCQ" || acronim == "GI2")
             {
@@ -535,7 +541,7 @@ namespace Template
 
             return returnArray;
         }
-        public static string[,] ConvertAnalyzeResultToLegendAnalyzeArray(List<PatRes> models, int[] SamplePositionList, string controlTarget = null)
+        public static string[,] ConvertAnalyzeResultToLegendAnalyzeArray(List<PatRes> models, int[] SamplePositionList, string controlTarget = null, string acronim = null)
         {
             int reporterColumns = 5;
             int extraColumns = 2;
@@ -564,7 +570,14 @@ namespace Template
 
                 var controlTargetEntity = list.FirstOrDefault(x => x.SampleIndex == 1 && x.TargetName == controlTarget);
                 if (controlTargetEntity != null)
-                    AddTargetToArray(SamplePositionList, anchorColumn, returnArray, currentColumn, controlTargetEntity, anchorRow);
+                    if (acronim == "ST6")
+                    {
+                        controlTargetEntity.TargetName = AMPLIFICATIONCONTROL;
+                        controlTargetEntity.Inter = controlTargetEntity.Inter == "Pos" ? "PASS" : "FAIL";
+                        AddTargetToArray(SamplePositionList, anchorColumn, returnArray, currentColumn, controlTargetEntity, anchorRow, acronim);
+                    }
+                    else
+                        AddTargetToArray(SamplePositionList, anchorColumn, returnArray, currentColumn, controlTargetEntity, anchorRow);
 
                 int rowIndex = 0;
                 foreach (var target in list)
@@ -587,7 +600,7 @@ namespace Template
 
             return returnArray;
         }
-        private static void AddTargetToArray(int[] SamplePositionList, int anchorColumn, string[,] returnArray, int currentColumn, PatRes target, int currentRow)
+        private static void AddTargetToArray(int[] SamplePositionList, int anchorColumn, string[,] returnArray, int currentColumn, PatRes target, int currentRow, string acronim = null)
         {
             if (anchorColumn == 0)
             {
@@ -597,8 +610,15 @@ namespace Template
 
             if (target.SampleIndex == 1)
             {
-                returnArray[currentRow, currentColumn + 0] = SamplePositionList == null ? "" : SamplePositionList[target.SampleIndex - 1].ToString();
-                returnArray[currentRow, currentColumn + 1] = "PC";
+                if (acronim == "ST6")
+                {
+
+                }
+                else
+                {
+                    returnArray[currentRow, currentColumn + 0] = SamplePositionList == null ? "" : SamplePositionList[target.SampleIndex - 1].ToString();
+                    returnArray[currentRow, currentColumn + 1] = "PC";
+                }
             }
 
 
@@ -682,6 +702,7 @@ namespace Template
                     patogenIndex++;
                 }
             }
+
 
             return DetailsDataTable;
         }

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LOADING_PATTERN>
+  <DIVIDE TOTAL_PARTS="1">
+    <CAPTURES>
+      <CAPTURE INDEX="1">
+        <PAD Pad_Id="1" />
+        <PAD Pad_Id="2" />
+      </CAPTURE>
+      <CAPTURE INDEX="2">
+        <PAD Pad_Id="17" />
+        <PAD Pad_Id="18" />
+      </CAPTURE>
+    </CAPTURES>
+    <REFERENCES>
+      <REFERENCE INDEX="1">
+        <PAD Pad_Id="177" />
+        <PAD Pad_Id="178" />
+      </REFERENCE>
+    </REFERENCES>
+    <BACKGROUNDS />
+    <SAMPLES>
+      <SAMPLE INDEX="1">
+        <WELL>
+          <PAD Pad_Id="1" />
+          <PAD Pad_Id="17" />
+        </WELL>
+      </SAMPLE>
+      <SAMPLE INDEX="2">
+        <WELL>
+          <PAD Pad_Id="2" />
+          <PAD Pad_Id="18" />
+        </WELL>
+      </SAMPLE>
+    </SAMPLES>
+  </DIVIDE>
+</LOADING_PATTERN>

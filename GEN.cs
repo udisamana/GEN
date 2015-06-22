@@ -27,8 +27,6 @@ namespace ST6 // new kit
 {
     public class ST6 : TPL_BaseTemplate // new kit
     {
-
-
         // NVC is not calculated in CalcRatio so number of markers is counted without him
         public const int NUMBER_OF_MARKERS_PER_SAPMLE_WITHOUT_NVC = 9;
 
@@ -45,13 +43,8 @@ namespace ST6 // new kit
         public List<PatogenReferanceResult> patogenRefResults = new List<PatogenReferanceResult>();
         public List<MutRefResult> mutRfResults = new List<MutRefResult>();
 
-
-
         public const string PBPB = "pbpb";
         public const string ORF1 = "orf1";
-
-
-
 
         public const string BGLOBIN = "B-Globin";
         public const string HIS1 = "HIS1";
@@ -70,6 +63,7 @@ namespace ST6 // new kit
         public const string NVC = "NVC";
         public const string BKG = "Bkg.";
         public const string PC = "PC";
+        public const string AMPLIFICATIONCONTROL = "Amplification Control";
         public const string PC_FAIL = "PC Fail";
         public const string PC_PASS = "PC Pass";
         public const string NONE = "None";
@@ -1146,9 +1140,9 @@ namespace ST6 // new kit
                 MarkerName[Convert.ToInt32(mutationsAssignment[currentPosition].CaptureIndex) - 1, Convert.ToInt32(mutationsAssignment[currentPosition].ReporterIndex) - 1] = mutationsAssignment[currentPosition].MutationName;
             }
 
-            if (acronym == "CFN" || acronym == "TSD" || acronym == "AJP")
+            if (acronym == "CFN" || acronym == "TSD" || acronym == "AJP" || acronym == "BRC")
                 kitType = "Mutation";
-            if (acronym == "GC2" || acronym == "GCQ" || acronym == "GI2" || acronym == "ST6")//new kit, classify new acronim
+            if (acronym == "GC2" || acronym == "GCQ" || acronym == "GI2" || acronym == "ST6" || acronym == "ST3")//new kit, classify new acronim
                 kitType = "Pathogen";
 
             return MarkerName;
@@ -1178,6 +1172,7 @@ namespace ST6 // new kit
 
             }
 
+
             if (kitType == "Pathogen")
             {
                 GeneralColumnsNames = new string[2] { "Position", "Sample" };
@@ -1188,7 +1183,7 @@ namespace ST6 // new kit
                 
                 List<PatRes> PatRess = BL.PathogenAnalyze(signalList, targets, acronym, SampleNameList);
 
-                return (BL.ConvertAnalyzeResultToLegendAnalyzeArray(PatRess, SamplePositionList, CustomValues.GetControlTarget(acronym)));
+                return (BL.ConvertAnalyzeResultToLegendAnalyzeArray(PatRess, SamplePositionList, CustomValues.GetControlTarget(acronym), acronym));
             }
 
             if (kitType == "Pathogen_old")
@@ -1225,9 +1220,10 @@ namespace ST6 // new kit
             List<Target> patogens = Target.ToModel(init());
             List<ReferenceSignal> referenceSignalModels = ReferenceSignal.ToModel(referenceSignals, NUMBEROFCOLORS, INSTANCESNUMBER, init().GetLength(0), init().GetLength(1));
 
+
             if (kitType == "Pathogen")
             {
-                if (acronym == "GC2")
+                if (acronym == "GC2" || acronym == "GI2")
                     patogens = CustomValues.CustomizeGC2(patogens);
                 if (acronym == "ST6")// new kit
                     patogens = CustomValues.CustomizeST6(patogens);
@@ -1272,8 +1268,9 @@ namespace ST6 // new kit
                         if (acronym == "GC2" || acronym == "GCT" || acronym == "GCQ" || acronym == "GI2")
                             isPass = CustomValues.isGC2PatogenPass(patogen.Name, minBkg, divBkg);
 
-                        if (acronym == "ST6")// new kit
+                        if (acronym == "ST6"  || (acronym == "ST3"))// new kit
                             isPass = CustomValues.isST6PatogenPass(patogen.Name, minBkg, divBkg);
+
 
                         patogenRefResults.Add(
                             new PatogenReferanceResult()
@@ -1522,75 +1519,73 @@ namespace ST6 // new kit
 
             foreach (var sample in SampleNameList)
             {
-                string sampleTargets = string.Empty;
+                List<string> positiveSampleTargets = new List<string>();
                 if (kitType == "Pathogen")
                 {
-                    sampleTargets = getTargetSummery(PatRess, sample, sampleTargets);
+                    positiveSampleTargets.AddRange(getTargetSummery(PatRess, sample, positiveSampleTargets));
                 }
                 if (kitType == "Mutation")
                 {
-                    sampleTargets = getTargetSummery(MutRess, sample, sampleTargets);
+                    positiveSampleTargets.AddRange(getTargetSummery(MutRess, sample, positiveSampleTargets));
                 }
 
-                if (sampleTargets != string.Empty)
-                    sampleTargets = sampleTargets.Remove(sampleTargets.Length - 2);
 
                 if (kitType == "Mutation")
                 {
-                    if (sampleTargets == string.Empty)
-                        sampleTargets = "No Mutation Detected";
+                    if (positiveSampleTargets.Count == 0)
+                        positiveSampleTargets.Add("No Mutation Detected");
                 }
 
                 if (kitType == "Pathogen")
                 {
-                    if (sampleTargets == string.Empty)
-                        sampleTargets = INVALID;
+                    if (positiveSampleTargets.Count == 0)
+                        positiveSampleTargets.Add(INVALID); ;
                 }
 
 
-                if (sampleTargets == ExtractionControl)
-                    sampleTargets = Negative;
+                if (positiveSampleTargets.Count == 1 && positiveSampleTargets.FirstOrDefault() == ExtractionControl)
+                {
+                    positiveSampleTargets = null;
+                    positiveSampleTargets.Add(Negative);
+                }
 
+                positiveSampleTargets.RemoveAll(x => x.StartsWith(ExtractionControl));
 
+                positiveSampleTargets = positiveSampleTargets.Distinct().ToList();
 
-                int index = sampleTargets.IndexOf(ExtractionControl);//remove the extraction control from targets
-                if (index > 0)
-                    sampleTargets = sampleTargets.Remove(index, ExtractionControl.Length);
-
-                ress.Add(sample, sampleTargets);
+                ress.Add(sample, String.Join(", ", positiveSampleTargets.ToArray()));
             }
 
             return (BL.ConvertDictionaryTo2dStringArray(ress));
 
         }
 
-        private string getTargetSummery(List<PatRes> PatRess, string sample, string sampleTargets)
+        private List<string> getTargetSummery(List<PatRes> PatRess, string sample, List<string> sampleTargets)
         {
             foreach (var patRes in PatRess.Where(x => x.SampleName == sample && x.Inter == POS))
             {
-                sampleTargets = checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(sampleTargets, patRes);
+                sampleTargets.AddRange(checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(sampleTargets, patRes));
             }
             return sampleTargets;
         }
-        private string getTargetSummery(List<MutRes> MutRess, string sample, string sampleTargets)
+        private List<string> getTargetSummery(List<MutRes> MutRess, string sample, List<string> sampleTargets)
         {
             foreach (var mutRes in MutRess.Where(x => x.SampleName == sample && x.Call != "-"))
             {
-                sampleTargets += mutRes.TargetName;
-                sampleTargets += ", ";
+                sampleTargets.Add(mutRes.TargetName);
             }
             return sampleTargets;
         }
-        private string checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(string sampleTargets, PatRes patRes)
+        private List<string> checkIfTheTargetReporterHaveInTheReferance2FalseInTheSameTarget(List<string> sampleTargets, PatRes patRes)
         {
-            sampleTargets += CustomValues.GetTargetFullNameByTarget(patRes.TargetName);
+            sampleTargets.Add(CustomValues.GetTargetFullNameByTarget(patRes.TargetName));
 
             //find false referance
             var refRess = patogenRefResults.Where(x => x.Reporter == patRes.Reporter && x.isControl == false).ToList();
 
             if (refRess.FirstOrDefault().IsMixPass == false)
             {
-                sampleTargets += "(Ref Fail RE-TEST: ";
+                string failSampleTargets = "(Ref Fail RE-TEST: ";
 
                 var duplicateTargets = refRess.GroupBy(x => x.Name)
                .Where(g => g.Count() > 1)
@@ -1598,13 +1593,12 @@ namespace ST6 // new kit
                .ToList();
                 var duplicateTargetsString = String.Join(", ", duplicateTargets.ToArray());
 
-                sampleTargets += duplicateTargetsString;
+                failSampleTargets += duplicateTargetsString;
 
-                sampleTargets += ")";
+                failSampleTargets += ")";
+                sampleTargets.Add(failSampleTargets);
             }
             //
-
-            sampleTargets += ", ";
 
             return sampleTargets;
         }

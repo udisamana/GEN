@@ -79,15 +79,24 @@
     <EmbeddedResource Include="ST6Template.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ST6_LOADINGPATTERN.xml" />
-    <EmbeddedResource Include="XMLs\ST3\ST3_LOADINGPATTERN.xml" />
-    <EmbeddedResource Include="XMLs\ST3\ST3Template.xml" />
-    <EmbeddedResource Include="XMLs\CFQ\ILL1000\CFQTemplate.xml">
+    <EmbeddedResource Include="XMLs\CFQ\CFQTemplate.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\IC2\Archive\IC2Template.xml" />
+    <EmbeddedResource Include="XMLs\IC2\Archive\IC2_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="XMLs\ST3\ST3Template.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\CFQ\CFQ_LOADINGPATTERN.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLs\BRC\BRCTemplate.xml" />
+    <EmbeddedResource Include="XMLs\BRC\BRC_LOADINGPATTERN.xml" />
     <EmbeddedResource Include="XMLs\IC2\IC2Template.xml" />
     <EmbeddedResource Include="XMLs\IC2\IC2_LOADINGPATTERN.xml" />
+    <EmbeddedResource Include="ST6_LOADINGPATTERN.xml" />
     <Content Include="XMLs\Loading Pattern\192 Samples\2 Captures.xml" />
     <Content Include="XMLs\Loading Pattern\96 Samples\2 Captures.xml" />
     <Content Include="XMLs\Loading Pattern\96 Samples\3 Captures.xml" />
@@ -98,7 +107,6 @@
     <EmbeddedResource Include="XMLs\GI2\GI2Template.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="XMLs\GI2\GI2_LOADINGPATTERN-onePart.xml" />
     <EmbeddedResource Include="XMLs\STT\STTTemplate.xml" />
     <EmbeddedResource Include="XMLs\STT\STT_LOADINGPATTERN.xml" />
     <Content Include="XMLs\GENERAL\2wells192samples.xml" />

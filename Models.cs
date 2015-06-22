@@ -7,6 +7,7 @@ using TemplateLib;
 
 namespace Template
 {
+
     
     public class Signal
     {
@@ -183,9 +184,12 @@ namespace Template
         public bool isBackround { get; set; }
         public bool isAvgBkg { get; set; }
         public string ControlPatogenName { get; set; } //control per single patogen
+        public const string PASS = "Pass";
+        public const string FAIL = "Fail";
 
         internal static string[,] FromModel(List<PatogenReferanceResult> models)
         {
+
             //            int columns = new PatogenResult().GetType().GetProperties().Count();
             int columns = 10;
             int rows = models.Count;
@@ -217,8 +221,8 @@ namespace Template
                     array[modelIndex, 3] = model.Color.ToString();
                     array[modelIndex, 4] = Math.Round(model.MinBkg, 1).ToString("0");
                     array[modelIndex, 5] = Math.Round(model.DivBkg, 1).ToString("0");
-                    array[modelIndex, 6] = model.IsPass.ToString();
-                    array[modelIndex, 7] = model.IsMixPass.ToString();
+                    array[modelIndex, 6] = model.IsPass == true ? PASS : FAIL;
+                    array[modelIndex, 7] = model.IsMixPass == true ? PASS : FAIL;
                     array[modelIndex, 8] = Math.Round(model.AvgBkg, 1).ToString("0");
                     array[modelIndex, 9] = model.ControlPatogenName ?? "";
                 }
